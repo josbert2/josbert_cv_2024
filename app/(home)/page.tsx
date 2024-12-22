@@ -16,8 +16,13 @@ import { DotPattern } from "@/components/dot-pattern";
 
 
 import Travels from '@/components/Travels';
+import imageRevealFragmentShader from "@/components/shaders/imageReveal/fragment.glsl";
+import imageRevealVertexShader from "@/components/shaders/imageReveal/vertex.glsl";
+
+
 
 export default function HomePage() {
+
   return (
     <div className="relative isolate flex min-h-screen flex-col bg-ln-gray-25">
       
@@ -31,6 +36,8 @@ export default function HomePage() {
         {/*<header className="header-main absolute top-[17px] z-10 flex h-16 w-full items-center justify-between gap-4 bg-ln-gray-25 px-4 lg:h-auto lg:w-auto lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs">
             asd
           </header> */}
+   
+
         <DashedLineContainer>
           <VerticalDashedLine
             className="md:-left-10"
