@@ -16,10 +16,6 @@ import { DotPattern } from "@/components/dot-pattern";
 
 
 import Travels from '@/components/Travels';
-import imageRevealFragmentShader from "@/components/shaders/imageReveal/fragment.glsl";
-import imageRevealVertexShader from "@/components/shaders/imageReveal/vertex.glsl";
-
-
 
 export default function HomePage() {
 

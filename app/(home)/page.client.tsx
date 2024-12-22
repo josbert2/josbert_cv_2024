@@ -6,6 +6,59 @@ import { motion, useAnimation } from "motion/react"
 import { cn } from "@/lib/cn"
 import { useIsMobile } from "@/hooks/use-mobile"
 
+
+
+// reveal
+import { Canvas } from "@react-three/fiber";
+import { animate } from "motion";
+import { useMotionValue } from "motion/react";
+import { useState } from "react";
+import imageRevealFragmentShader from "@/components/shaders/imageReveal/fragment.glsl";
+import imageRevealVertexShader from "@/components/shaders/imageReveal/vertex.glsl";
+import RevealImage from "@/components/RevealImage";
+
+const ImageReveal = ({ src }: { src: string }) => {
+  // FULLSCREEN MODE
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const handleFullScreen = () => setIsFullScreen(!isFullScreen);
+
+  // DARK/LIGHT MODE
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const handleDarkMode = () => setIsDarkMode(!isDarkMode);
+
+  // REVEAL PROGRESS ANIMATION
+  const [isRevealed, setIsRevealed] = useState(true);
+  const revealProgress = useMotionValue(1);
+
+  const handleReveal = () => {
+    animate(revealProgress, isRevealed ? 0 : 1, {
+      duration: 1.5,
+      ease: "easeInOut",
+    });
+    setIsRevealed(!isRevealed);
+  };
+  return (
+    <Canvas
+        className="z-10"
+        style={{
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: isDarkMode ? "#000" : "#F9FAF7",
+        }}
+      >
+        <RevealImage
+          imageTexture="./img/textureupscaled.webp"
+          revealProgress={revealProgress}
+          isFullScreen={isFullScreen}
+        />
+    </Canvas>
+  )
+  
+
+}
+
+
+
 const DashedLineContainer = ({ children }: { children: React.ReactNode }) => {
   const container = {
     initial: {

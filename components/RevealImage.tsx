@@ -1,3 +1,4 @@
+'use client'
 import { shaderMaterial, useAspect, useTexture } from "@react-three/drei";
 import { extend, useFrame, useThree } from "@react-three/fiber";
 import PropTypes from "prop-types";
