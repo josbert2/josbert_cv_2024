@@ -603,8 +603,10 @@
     right: 0px;
     bottom: 0px;
     display: block;
-    width: 640px;
-    height: 800px;
+  /* width: 640px;
+    height: 800px;*/
+    width: 100%;
+    height: 100%;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -715,28 +717,6 @@
 
 }
 
-.animation {
-  position: relative;
-  right: 0px;
-  bottom: 0px;
-  display: block;
-  width: 640px;
-  height: 800px;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 auto;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}
 
 .intro-text {
   color: #908a76;

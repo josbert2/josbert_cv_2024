@@ -17,6 +17,9 @@ import { DotPattern } from "@/components/dot-pattern";
 
 import Travels from '@/components/Travels';
 import PlanetLine from '@/components/PlanetLine';
+import About from "@/components/pages/about";
+import Separator from "@/components/misc/separator";
+
 
 export default function HomePage() {
   return (
@@ -261,55 +264,10 @@ export default function HomePage() {
               <Travels />
           </div>
       </div>
-      <div className="container mt-16 pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
-        <div className="border-t border-[#e0e0e0] w-full">
-          
-        </div>
-      </div>
-      <div className="container mt-16 sm:mt-20">
-          <button className="bg-bg-weak-50 px-1 py-1 rounded-full">
-            <div className="bg-white px-4 shadow-regular-xs py-2 rounded-full">
-              <span className="text-[18px] bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold">
-                01. About me
-              </span>
-            </div>
-          </button>
-      </div>
+      <Separator/>
+      <About/>
       
     </div>
     
   )
 }
-
-const features = [
-  {
-    title: "Highly Customizable",
-    description:
-      "Inherits shadcn/ui's design philosophy with Radix UI's powerful declarative components",
-  },
-  {
-    title: "Great Developer Experience",
-    description:
-      "Declarative API design, reduced boilerplate code, improved development efficiency",
-  },
-  {
-    title: "Accessibility First",
-    description:
-      "Built on Radix UI's accessibility support with beautiful animations",
-  },
-  {
-    title: "Theme System",
-    description:
-      "Built-in light/dark modes with support for custom theme colors and styles",
-  },
-  {
-    title: "TypeScript First",
-    description:
-      "Complete TypeScript type support with intelligent code suggestions",
-  },
-  {
-    title: "Responsive Design",
-    description:
-      "Optimized for different devices ensuring great cross-platform experience",
-  },
-]
