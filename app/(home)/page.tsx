@@ -16,10 +16,102 @@ import { DotPattern } from "@/components/dot-pattern";
 
 
 import Travels from '@/components/Travels';
+import PlanetLine from '@/components/PlanetLine';
 
 export default function HomePage() {
   return (
     <div className="relative isolate flex min-h-screen flex-col bg-ln-gray-25">
+          <div className="absolute  top-[20px] z-20 flex w-full items-center justify-center gap-8 bg-ln-gray-900 lg:bg-transparent mac:justify-stretch">
+            
+          
+           
+          
+            <div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-l bleed-ln-gray-200 mac:block">
+              <img
+                src="https://alignui.com/images/landing/dot.png"
+                width={9}
+                height={9}
+                alt=""
+                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-[37px]"
+              />
+              <img
+                src="https://alignui.com/images/landing/dot.png"
+                width={9}
+                height={9}
+                alt=""
+                className="absolute z-30 min-h-[9px] min-w-[9px] -right-px -top-1"
+              />
+            </div>
+            <header className="relative z-10 flex h-10 w-full items-center justify-between gap-4 rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto lg:w-auto lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs">
+              <div className="absolute z-[9999] h-[4px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></div>
+              <div className="flex items-center gap-2.5 pr-40">
+                <a className="focus:outline-none" href="/">
+                  <div className="relative">
+                    <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
+                      JH
+                    </h1>
+                  </div>
+                </a>
+               
+              </div>
+              <nav className="hidden items-center gap-2.5 lg:flex">
+            
+                <button className=" relative
+                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
+                  px-4 text-label-sm outline-none transition duration-200 ease-out 
+                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
+                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
+                  01. About
+                </button>
+                <button className=" relative
+                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
+                  px-4 text-label-sm outline-none transition duration-200 ease-out 
+                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
+                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
+                  02. Experiencia
+                </button>
+                <button className=" relative
+                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
+                  px-4 text-label-sm outline-none transition duration-200 ease-out 
+                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
+                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
+                  03. Trabajos
+                </button>
+                <button className=" relative
+                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
+                  px-4 text-label-sm outline-none transition duration-200 ease-out 
+                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
+                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
+                  04. Contactos
+                </button>
+                
+              </nav>
+             
+            
+              
+            </header>
+            <div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-r bleed-ln-gray-200 mac:block">
+              <img
+                src="https://alignui.com/images/landing/dot.png"
+                width={9}
+                height={9}
+                alt=""
+                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -right-[37px] left-auto"
+              />
+              <img
+                src="https://alignui.com/images/landing/dot.png"
+                width={9}
+                height={9}
+                alt=""
+                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-px"
+              />
+            </div>
+          </div>
+
       
       <div className="ellipsis pc-37aetM undefined" data-v-ec8112a1=""><div className="ellipsis-item" data-v-ec8112a1=""></div></div>
 
@@ -27,7 +119,11 @@ export default function HomePage() {
         <div className="absolute -left-0 bleed-ln-gray-200 bleed-border-b   h-full"></div>
         <div className="absolute -right-0 bleed-ln-gray-200 bleed-border-b h-full"></div>
       </div>
-      <div className="flex flex-col items-center text-center px-52 py-32 z-[100]">
+
+     
+
+
+      <div className="flex flex-col items-center text-center px-40 xl:px-72 py-32 z-[100]">
         {/*<header className="header-main absolute top-[17px] z-10 flex h-16 w-full items-center justify-between gap-4 bg-ln-gray-25 px-4 lg:h-auto lg:w-auto lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs">
             asd
           </header> */}
@@ -61,7 +157,7 @@ export default function HomePage() {
             UI/UX Designer
           </h2>
           <div className="">
-            <div className="mx-auto h-8 w-full max-w-[596px] items-center gap-6 px-4 my-8 hidden md:flex xl:my-12">
+            <div className="mx-auto h-8 w-full max-w-[596px] items-center gap-6 px-4 my-4 hidden md:flex xl:my-8">
                 <div className="relative h-px w-full flex-1 bg-ln-gray-200">
                     <img src="https://alignui.com/images/landing/dot-gray-25.png" width="9" height="9" alt="" className="absolute z-30 min-h-[9px] min-w-[9px] left-0 top-1/2 -translate-x-1/2 -translate-y-1/2" />
                     <img src="https://alignui.com/images/landing/dot-gray-25.png" width="9" height="9" alt="" className="absolute z-30 min-h-[9px] min-w-[9px] right-0 top-1/2 -translate-y-1/2 translate-x-1/2" />
@@ -118,37 +214,16 @@ export default function HomePage() {
              
             </div>
           </div>
-          <VerticalDashedLine />
-
+      
           
       
 
           <div className="flex items-center justify-center">
             <div className="flex items-center justify-center gap-4 relative py-10 px-8">
-            <button className="about-me relative inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10 px-4 text-label-sm outline-none transition duration-200 ease-out focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs ring-1 ring-inset ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-              01. About
-            </button>
-            <button className="experiencia relative inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10 px-4 text-label-sm outline-none transition duration-200 ease-out focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs ring-1 ring-inset ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-              02. Experiencia
-            </button>
-            <button className="trabajos relative inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10 px-4 text-label-sm outline-none transition duration-200 ease-out focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs ring-1 ring-inset ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-              03. Trabajos
-            </button>
-            <button className="contacto relative inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10 px-4 text-label-sm outline-none transition duration-200 ease-out focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs ring-1 ring-inset ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-              04. Contactos
-            </button>
+            
 
 
-              <HorizontalDashedLine
-                className="hidden md:block"
-                height="calc(100% + 56px)"
-                side="left"
-              />
-              <HorizontalDashedLine
-                className="hidden md:block"
-                height="calc(100% + 56px)"
-                side="right"
-              />
+             
             </div>
           </div>
 
@@ -166,10 +241,15 @@ export default function HomePage() {
           />
           <DashedCircle className="-top-12 -left-12" />
           
+          <div className="h-full w-full absolute top-0 right-0 overflow-hidden z-[-10]">
+            <div className="w-full h-full flex justify-end">
+              <PlanetLine/>
+            </div>
+          </div>
           
         </DashedLineContainer>
 
-       
+      
       </div>
       <div className="container pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
         <div className="border-t border-[#e0e0e0] w-full">
@@ -181,10 +261,15 @@ export default function HomePage() {
               <Travels />
           </div>
       </div>
+      <div className="container mt-16 pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
+        <div className="border-t border-[#e0e0e0] w-full">
+          
+        </div>
+      </div>
       <div className="container mt-16 sm:mt-20">
           <button className="bg-bg-weak-50 px-1 py-1 rounded-full">
             <div className="bg-white px-4 shadow-regular-xs py-2 rounded-full">
-              <span className="text-title-h6 bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold">
+              <span className="text-[18px] bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold">
                 01. About me
               </span>
             </div>
