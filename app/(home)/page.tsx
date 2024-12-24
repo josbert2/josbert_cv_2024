@@ -19,109 +19,15 @@ import Travels from '@/components/Travels';
 import PlanetLine from '@/components/PlanetLine';
 import About from "@/components/pages/about";
 import Separator from "@/components/misc/separator";
-
+import Header from "@/components/header";
+import LineAbsolute from "@/components/misc/lineAbsolute";
+import Stay from "@/components/misc/Stay";
 
 export default function HomePage() {
   return (
     <div className="relative isolate flex min-h-screen flex-col bg-ln-gray-25">
-          <div className="absolute  top-[20px] z-20 flex w-full items-center justify-center gap-8 bg-ln-gray-900 lg:bg-transparent mac:justify-stretch">
-            
-          
-           
-          
-            <div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-l bleed-ln-gray-200 mac:block">
-              <img
-                src="https://alignui.com/images/landing/dot.png"
-                width={9}
-                height={9}
-                alt=""
-                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-[37px]"
-              />
-              <img
-                src="https://alignui.com/images/landing/dot.png"
-                width={9}
-                height={9}
-                alt=""
-                className="absolute z-30 min-h-[9px] min-w-[9px] -right-px -top-1"
-              />
-            </div>
-            <header className="relative z-10 flex h-10 w-full items-center justify-between gap-4 rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto lg:w-auto lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs">
-              <div className="absolute z-[9999] h-[4px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></div>
-              <div className="flex items-center gap-2.5 pr-40">
-                <a className="focus:outline-none" href="/">
-                  <div className="relative">
-                    <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
-                      JH
-                    </h1>
-                  </div>
-                </a>
-               
-              </div>
-              <nav className="hidden items-center gap-2.5 lg:flex">
-            
-                <button className=" relative
-                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
-                  px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
-                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
-                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-                  01. About
-                </button>
-                <button className=" relative
-                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
-                  px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
-                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
-                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-                  02. Experiencia
-                </button>
-                <button className=" relative
-                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
-                  px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
-                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
-                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-                  03. Trabajos
-                </button>
-                <button className=" relative
-                 inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
-                  px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
-                  ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
-                 focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
-                  04. Contactos
-                </button>
-                
-              </nav>
-             
-            
-              
-            </header>
-            <div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-r bleed-ln-gray-200 mac:block">
-              <img
-                src="https://alignui.com/images/landing/dot.png"
-                width={9}
-                height={9}
-                alt=""
-                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -right-[37px] left-auto"
-              />
-              <img
-                src="https://alignui.com/images/landing/dot.png"
-                width={9}
-                height={9}
-                alt=""
-                className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-px"
-              />
-            </div>
-          </div>
-
-      
-      <div className="ellipsis pc-37aetM undefined" data-v-ec8112a1=""><div className="ellipsis-item" data-v-ec8112a1=""></div></div>
-
-      <div className="container pointer-events-none absolute inset-0 -z-10  select-none mac:block">
-        <div className="absolute -left-0 bleed-ln-gray-200 bleed-border-b   h-full"></div>
-        <div className="absolute -right-0 bleed-ln-gray-200 bleed-border-b h-full"></div>
-      </div>
+      <Header />
+      <LineAbsolute />
 
      
 
@@ -249,7 +155,7 @@ export default function HomePage() {
               <PlanetLine/>
             </div>
           </div>
-          
+          <Stay />
         </DashedLineContainer>
 
       
