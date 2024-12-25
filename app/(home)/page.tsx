@@ -18,6 +18,8 @@ import { DotPattern } from "@/components/dot-pattern";
 import Travels from '@/components/Travels';
 import PlanetLine from '@/components/PlanetLine';
 import About from "@/components/pages/about";
+import Contact from "@/components/pages/contact";
+
 import Separator from "@/components/misc/separator";
 import Header from "@/components/header";
 import LineAbsolute from "@/components/misc/lineAbsolute";
@@ -172,6 +174,8 @@ export default function HomePage() {
       </div>
       <Separator/>
       <About/>
+      <Separator/>
+      <Contact/>
       
     </div>
     
