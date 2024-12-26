@@ -9,15 +9,46 @@ export default function Contact() {
   });
   return (
     <>
-      <section ref={ref} className="container mt-20  sm:mt-20">
+      <div className="pointer-events-none absolute left-1/2 top-0 -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/30 to-zinc-900/30 opacity-10 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 dark:to-zinc-900/30">
+            <svg
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full fill-black/100 stroke-black/100 mix-blend-overlay dark:fill-white/100 dark:stroke-white/100"
+            >
+              <defs>
+                <pattern
+                  id=":r4l:"
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                  x={-12}
+                  y={4}
+                >
+                  <path d="M.5 20V.5H20" fill="none" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" strokeWidth={0} fill="url(#:r4l:)" />
+              <svg x={-12} y={4} className="overflow-visible">
+                <rect strokeWidth={0} width={21} height={21} x={160} y={60} />
+                <rect strokeWidth={0} width={21} height={21} x={160} y={100} />
+                <rect strokeWidth={0} width={21} height={21} x={160} y={60} />
+                <rect strokeWidth={0} width={21} height={21} x={200} y={120} />
+                <rect strokeWidth={0} width={21} height={21} x={200} y={100} />
+              </svg>
+            </svg>
+          </div>
+        </div>
+      <section ref={ref} className="container mt-20  sm:mt-20 relative">
+        
+ 
         <div className="px-20">
           <div
             className="hero mt-14 mb-44 flex flex-col items-center px-7 md:px-0 "
             id="contact"
           >
-            <h1 className="heroh1 bg-clip-text bg-gradient-to-r from-black text-transparent antialiased font-anurati">
+            <h1 className="heroh1  antialiased  text-gray-500">
               Déjame tu <br />
-              <span id="hero-heading-key-line " className="font-anurati">
+              <span id="hero-heading-key-line" >
                 mensaje
               </span>{" "}
               para que podamos trabajar juntos
@@ -40,8 +71,9 @@ export default function Contact() {
                   href="#"
                   className="group relative z-20 flex h-10 w-full cursor-pointer items-center justify-center
                    space-x-2 rounded-lg bg-white p-px px-4 py-2 text-sm font-semibold leading-6
-                    text-gray-500 border border-primary no-underline shadow-input transition
-                     duration-200 hover:-translate-y-0.5 dark:bg-neutral-800 dark:text-white sm:w-52 shadow-ln-branding-neutral"
+                    text-gray-500 border   border-[#333]/10 no-underline shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition
+                     duration-200 hover:-translate-y-0.5 dark:bg-neutral-800
+                      dark:text-white sm:w-52 shadow-ln-branding-neutral"
                 >
                   ¡Di hola!
                 </a>

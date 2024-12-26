@@ -174,8 +174,10 @@ export default function HomePage() {
       </div>
       <Separator/>
       <About/>
-      <Separator/>
-      <Contact/>
+     
+      <div className="relative">
+        <Contact/>
+      </div>
       
     </div>
     
