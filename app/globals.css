@@ -900,3 +900,36 @@
   background-image: linear-gradient(90deg, #d66761 16.66666%, #f5c0b2 33.33333%, #aee8fa 50%, #68bde7 66.66666%, #6bd490 83.33333%, #a2f6cf);
   color: #fff;
 }
+
+.item-title span {
+    display: inline-block;
+    margin: 0;
+    min-width: 10px;
+    width: auto;
+    line-height: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    opacity: 1;
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+}
+
+.background-section{
+  --hue-4: #d5d5d5;
+  --black: #f7f7f7;
+  --accent: var(--hue-4);
+
+  min-height: 100vh;
+  min-height: 100svh;
+  --dot-size: 1px;
+  --gap-size: 20px;
+  --offset: calc(var(--gap-size) / 2);
+  background-image: linear-gradient(var(--black) 60%, transparent 100%), radial-gradient(var(--accent) var(--dot-size), transparent var(--dot-size)), radial-gradient(var(--accent) var(--dot-size), transparent var(--dot-size));
+  background-position: 0 0, 0 0, var(--offset) var(--offset);
+  background-size: 100% 100%, var(--gap-size) var(--gap-size), var(--gap-size) var(--gap-size);
+
+  display: flex
+;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
