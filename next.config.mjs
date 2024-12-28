@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['https://www.jopcmelo.dev/'],
   },
+  experimental: {
+    reactCompiler: true,
+  },
 };
 
 export default nextConfig;

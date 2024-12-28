@@ -51,7 +51,7 @@ export default function Header() {
               />
             </div> */}
             <motion.header 
-              className="relative z-10 flex h-10 w-full items-center justify-between  rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto  lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs"
+              className="relative z-10 flex h-10 w-full items-center justify-between  rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto  lg:justify-start lg:rounded-3xl bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs"
               animate={scrolled ? { width: "100%", borderRadius: '0' } : {  width: '50%', borderRadius: '16px' }} // Baja el header 40px si se cumple la condición
               transition={{ duration: 0.6, ease: easeOutQuint,   delay: 0.1, }} // Transición suave
             >

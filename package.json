@@ -26,6 +26,7 @@
     "@radix-ui/react-toast": "^1.2.2",
     "@radix-ui/react-tooltip": "^1.1.3",
     "@remixicon/react": "^4.5.0",
+    "babel-plugin-react-compiler": "^19.0.0-beta-b2e8e9c-20241220",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.4",
