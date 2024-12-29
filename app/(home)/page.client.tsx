@@ -93,14 +93,14 @@ const DashedCircle = ({ className }: { className?: string }) => {
           width="100"
           height="100"
           viewBox="0 0 100 100"
-          className="absolute inset-0"
+          className="absolute inset-0 border-color svg-stroke-color"
         >
           <motion.circle
             cx="50"
             cy="50"
             r="40"
             fill="none"
-            stroke="#d7d7d7"
+            stroke="current"
             strokeWidth="1"
             strokeDasharray="5,5"
             initial={{ strokeDashoffset: 283 }}

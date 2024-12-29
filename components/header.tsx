@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <motion.div
-      className="fixed top-[20px] left-0 !transform tranform-x-2/4 z-[9999] flex w-full items-center justify-center gap-8 bg-ln-gray-900 lg:bg-transparent"
+      className="fixed top-[20px]  left-0 !transform tranform-x-2/4 z-[9999] flex w-full items-center justify-center gap-8 bg-ln-gray-900 lg:bg-transparent"
       initial={{ y: 0 }}
       animate={scrolled ? { y: -20, top: 0   } : { y: 0, top: "20px"  }} // Baja el header 40px si se cumple la condición
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1],   delay: 0.1, }} // Transición suave
@@ -51,18 +51,18 @@ export default function Header() {
               />
             </div> */}
             <motion.header 
-              className="relative z-10 flex h-10 w-full items-center justify-between  rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto  lg:justify-start lg:rounded-3xl bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs"
+              className="relative backdrop-blur-lg z-10 flex h-10 w-full items-center justify-between  rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto  lg:justify-start lg:rounded-3xl bg-ln-gray-header lg:p-[18px] lg:shadow-ln-xs"
               animate={scrolled ? { width: "100%", borderRadius: '0' } : {  width: '50%', borderRadius: '16px' }} // Baja el header 40px si se cumple la condición
               transition={{ duration: 0.6, ease: easeOutQuint,   delay: 0.1, }} // Transición suave
             >
               <motion.div
                 animate={!scrolled ? { top: ".3px", bottom: 'auto' } : { top: "auto", bottom: "0px" }}
                transition={{ duration: 0.2, ease: easeOutQuint,   delay: 0, }}
-               className="absolute z-[9999] h-[4px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></motion.div>
+               className="absolute z-[9999] h-[1px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></motion.div>
               <div className="flex items-center gap-2.5 pr-40">
                 <a className="focus:outline-none" href="/">
                   <div className="relative">
-                    <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
+                    <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
                       JH
                     </h1>
                   </div>
@@ -116,7 +116,7 @@ export default function Header() {
                         className="relativeisolate grid  auto-cols-fr grid-flow-col gap-1 rounded-10 bg-bg-weak-50 p-1"
                         style={{ outline: "none" }}
                       >
-                        <button className=" bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
+                        <button className=" bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
@@ -133,7 +133,7 @@ export default function Header() {
                             <path d="M9 18c-4.51 2-5-2-7-2" />
                           </svg>
                         </button>
-                        <button className="  bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
+                        <button className="  bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
@@ -151,7 +151,7 @@ export default function Header() {
                             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                           </svg>
                         </button>
-                        <button className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
+                        <button className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
@@ -169,7 +169,7 @@ export default function Header() {
                             <circle cx={4} cy={4} r={2} />
                           </svg>
                         </button>
-                        <button className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
+                        <button className="   bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
@@ -189,7 +189,7 @@ export default function Header() {
                             <line x1={12} x2={12} y1={2} y2="8.5" />
                           </svg>
                         </button>
-                        <button className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
+                        <button className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}

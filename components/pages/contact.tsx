@@ -52,7 +52,7 @@ export default function Contact() {
       </div>
       
       <section ref={ref} className="container mt-20  sm:mt-20 relative">
-      <div className="border-t border-[#e0e0e0] w-full"></div>3
+      <div className="border-t border-color w-full"></div>3
         <div className=" background-section">
           
           <div className="px-20">

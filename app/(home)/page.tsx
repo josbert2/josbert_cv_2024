@@ -31,7 +31,33 @@ export default function HomePage() {
       <Header />
       <LineAbsolute />
 
-     
+      <div className="pointer-events-none absolute inset-x-0 top-[-20rem] -z-10 transform-gpu overflow-hidden blur-3xl">
+        <svg
+          className="relative left-[calc(50%-30rem)] -z-10 h-[102.375rem] max-w-none -translate-x-1/2 rotate-[30deg] opacity-30"
+          viewBox="0 0 1450 678"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0h1440v807H0V0Z" fill="url(#a)" />
+          <path d="M0 1h1440v-2H0v2Z" fill="#F0F1F7" mask="url(#b)" />
+          <defs>
+            <radialGradient
+              id="a"
+              cx={0}
+              cy={0}
+              r={1}
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(340.49937606 556.463845 -1058.73086457 647.8357975 400.5 241.266)"
+            >
+              <stop stopColor="#E5CCFF" />
+              <stop offset=".305881" stopColor="#CCF" />
+              <stop offset=".601058" stopColor="#FFF6CC" />
+              <stop offset={1} stopColor="#FAFAFC" stopOpacity={0} />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
 
 
       <div className="flex flex-col items-center text-center px-40 xl:px-72 py-32 z-[100]">
@@ -54,10 +80,10 @@ export default function HomePage() {
           
           <div className="flex justify-center py-4 rounded-lg mt-6">
             <div className="frame rounded-lg">
-              <img className="rounded-lg" src="https://josbert.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperfil.41276050.jpg&w=1080&q=75" />
+              <img className="rounded-[24px]" src="https://josbert.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperfil.41276050.jpg&w=1080&q=75" />
             </div>
           </div>
-          <h1 className={cn('text-title-h1 bg-clip-text bg-gradient-to-b from-black text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-5 font-anurati')}>
+          <h1 className={cn('text-title-h1 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-5 font-anurati')}>
             Josbert Hernández
            
 
@@ -95,30 +121,30 @@ export default function HomePage() {
               
               <button
                
-                className=" bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
+                className=" bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
               
               >
                 <Github className="text-[#9b9b9b] w-4 h-4" />
               </button>
               <button
               
-                className="  bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
+                className="  bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
               
               >
                 <Instagram className="text-[#9b9b9b] w-4 h-4" />
               </button>
               <button
-                className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
+                className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
               >
                 <Linkedin className="text-[#9b9b9b] w-4 h-4" />
               </button>
               <button
-                className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
+                className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
               >
                 <Codepen className="text-[#9b9b9b] w-4 h-4" />
               </button>
               <button
-                className="   bg-white  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
+                className="   bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
               >
                 <Twitter className="text-[#9b9b9b] w-4 h-4" />
               </button>
@@ -154,7 +180,7 @@ export default function HomePage() {
           
           <div className="h-full w-full absolute top-0 right-0 overflow-hidden z-[-10]">
             <div className="w-full h-full flex justify-end">
-              <PlanetLine/>
+              {/*<PlanetLine/> */}
             </div>
           </div>
           <Stay />
@@ -163,7 +189,7 @@ export default function HomePage() {
       
       </div>
       <div className="container pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
-        <div className="border-t border-[#e0e0e0] w-full">
+        <div className="border-t border-color w-full">
           
         </div>
       </div>

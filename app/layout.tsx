@@ -47,7 +47,7 @@ export default function RootLayout({
       data-theme="dark"
       className={cn(inter.variable, geistMono.variable, anurati.variable, 'antialiased dark')}
     >
-      <body className="bg-ln-gray-25 ">
+      <body className="bg-ln-gray-25 dark">
         <ThemeProvider attribute='class'>
           <TooltipProvider>
            

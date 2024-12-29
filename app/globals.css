@@ -400,13 +400,49 @@
     --bg-sub-background: 255 255 255;
     --bg-btn-background: 255 255 255;
     --bg-border-decoration: 224 224 224;
+    --svg-color: #c9c9c9;
+    
   }
   [data-theme="dark"]{
     --bg-background-body: 26 26 29;
     --bg-sub-background:38 39 47;
     --bg-btn-background: 38 39 47;
-    --bg-border-decoration: 131 131 131;
+    --bg-border-decoration: #9b9b9b26;
+    --svg-color: #d3d3d336;
+    --p: #e6811d66
+    
   }
+}
+.backdrop-blur-lg {
+  --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 17px );
+  -webkit-backdrop-filter: blur( 17px );
+
+}
+
+.neon-effect {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  box-shadow: 0 0 10px #feb47b, 0 0 20px #feb47b, 0 0 30px #ff7e5f, 0 0 40px #ff7e5f;
+  border-radius: 2px;
+}
+
+.svg-stroke-color{
+  stroke: var(--svg-color);
+}
+.pagination-current {
+  background-image: linear-gradient(to right, transparent, var(--p), transparent);
+  opacity: 1;
+}
+.carousel * {
+  box-sizing: border-box;
+}
+
+.bg-ln-gray-200{
+  background-color: var(--bg-border-decoration);
 }
 
 /* custom scale for Remix Icon */
@@ -420,6 +456,12 @@
 }
 .bleed-ln-gray-200 {
   --tw-full-bleed-color: var(--bg-border-decoration);
+}
+.stroke-svg-color{
+
+}
+.border-color{
+  border-color: var(--bg-border-decoration);
 }
 .bleed-border-b {
   border-image: linear-gradient(var(--tw-full-bleed-color) 0 0) 1; /* 0 9999vw 0 9999vw */
@@ -538,6 +580,10 @@
   }
 }
 
+.bg-ln-gray-header {
+  --tw-bg-opacity: 0.3;
+  background-color: rgb(var(--bg-sub-background) / var(--tw-bg-opacity, 1));
+}
 
   .bg-ln-gray-0 {
       --tw-bg-opacity: 1;
