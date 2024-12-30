@@ -401,6 +401,7 @@
     --bg-btn-background: 255 255 255;
     --bg-border-decoration: 224 224 224;
     --svg-color: #c9c9c9;
+    --svg-color-doit: #d3d3d336;
     
   }
   [data-theme="dark"]{
@@ -408,10 +409,20 @@
     --bg-sub-background:38 39 47;
     --bg-btn-background: 38 39 47;
     --bg-border-decoration: #9b9b9b26;
-    --svg-color: #d3d3d336;
+    --svg-color: #00000036;
+    --svg-fill-color: #75757536;
     --p: #e6811d66
+    --svg-color-doit: #d3d3d336;
     
   }
+}
+
+
+.svg-stroke-color-doit{
+  stroke: var(--svg-color-doit);
+}
+.svg-fill-color{
+  fill: var(--svg-fill-color);
 }
 .backdrop-blur-lg {
   --tw-backdrop-blur: blur(16px);
@@ -582,7 +593,8 @@
 
 .bg-ln-gray-header {
   --tw-bg-opacity: 0.3;
-  background-color: rgb(var(--bg-sub-background) / var(--tw-bg-opacity, 1));
+  --bg-sub-background-header: 51 49 47;
+  background-color: rgb(var(--bg-sub-background-header) / var(--tw-bg-opacity, 1));
 }
 
   .bg-ln-gray-0 {

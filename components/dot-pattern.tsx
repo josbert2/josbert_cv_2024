@@ -30,7 +30,7 @@ export function DotPattern({
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute  inset-0 h-full w-full fill-neutral-400/80 svg-stroke-color",
+        "pointer-events-none absolute  inset-0 h-full w-full fill-neutral-400/80 svg-stroke-color-doit",
         className,
       )}
       {...props}

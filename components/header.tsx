@@ -51,7 +51,7 @@ export default function Header() {
               />
             </div> */}
             <motion.header 
-              className="relative backdrop-blur-lg z-10 flex h-10 w-full items-center justify-between  rounded-t-2xl bg-ln-gray-25 px-4 lg:h-auto  lg:justify-start lg:rounded-3xl bg-ln-gray-header lg:p-[18px] lg:shadow-ln-xs"
+              className="relative backdrop-blur-lg z-10 flex h-10 w-full items-center !py-[35px] justify-between  rounded-t-2xl bg-ln-gray-25 px-4  lg:justify-start lg:rounded-3xl bg-ln-gray-header  lg:shadow-ln-xs"
               animate={scrolled ? { width: "100%", borderRadius: '0' } : {  width: '50%', borderRadius: '16px' }} // Baja el header 40px si se cumple la condición
               transition={{ duration: 0.6, ease: easeOutQuint,   delay: 0.1, }} // Transición suave
             >
@@ -59,7 +59,7 @@ export default function Header() {
                 animate={!scrolled ? { top: ".3px", bottom: 'auto' } : { top: "auto", bottom: "0px" }}
                transition={{ duration: 0.2, ease: easeOutQuint,   delay: 0, }}
                className="absolute z-[9999] h-[1px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></motion.div>
-              <div className="flex items-center gap-2.5 pr-40">
+              <div className="flex items-center gap-2.5 pr-40 absolute top-2/4 transform -translate-y-2/4 ">
                 <a className="focus:outline-none" href="/">
                   <div className="relative">
                     <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
@@ -69,12 +69,12 @@ export default function Header() {
                 </a>
                
               </div>
-              <nav className="hidden items-center gap-2.5 lg:flex">
+              <nav className="hidden justify-center items-center gap-2.5 lg:flex absolute top-2/4 transform -translate-y-2/4  right-0">
             
                 <button className=" relative
                  inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
                   px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  focus:outline-none text-ln-gray-500 shadow-regular-xs 
                   ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
                  focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
                   01. About
@@ -82,7 +82,7 @@ export default function Header() {
                 <button className=" relative
                  inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
                   px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  focus:outline-none  text-ln-gray-500 shadow-regular-xs 
                   ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
                  focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
                   02. Experiencia
@@ -90,7 +90,7 @@ export default function Header() {
                 <button className=" relative
                  inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
                   px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  focus:outline-none  text-ln-gray-500 shadow-regular-xs 
                   ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
                  focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
                   03. Trabajos
@@ -98,7 +98,7 @@ export default function Header() {
                 <button className=" relative
                  inline-flex h-10 items-center justify-center gap-3.5 whitespace-nowrap rounded-10
                   px-4 text-label-sm outline-none transition duration-200 ease-out 
-                  focus:outline-none bg-bg-white-0 text-ln-gray-500 shadow-regular-xs 
+                  focus:outline-none  text-ln-gray-500 shadow-regular-xs 
                   ring-stroke-soft-200 hover:bg-bg-weak-50 hover:shadow-none hover:ring-transparent
                  focus-visible:shadow-button-important-focus focus-visible:ring-stroke-strong-950 w-full">
                   04. Contactos
