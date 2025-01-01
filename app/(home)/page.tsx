@@ -190,8 +190,11 @@ export default function HomePage() {
         </div>
       </div>
       <div className="">
-          <div className="mt-16 sm:mt-20">
-              <Travels />
+          <div className="mt-16 sm:mt-20 relative">
+            <div className="absolute top-[35px] w-full h-[57px] bg-[#1a1a1d]">
+            
+            </div>
+            <Travels />
           </div>
       </div>
       <Separator/>
