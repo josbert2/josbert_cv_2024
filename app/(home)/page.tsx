@@ -24,11 +24,15 @@ import Separator from "@/components/misc/separator";
 import Header from "@/components/header";
 import LineAbsolute from "@/components/misc/lineAbsolute";
 import Stay from "@/components/misc/Stay";
+import CornedEarth from '@/components/corned-earth'
+import StarField  from "@/components/particles";
+
 
 export default function HomePage() {
   return (
     <div className="relative isolate flex min-h-screen flex-col bg-ln-gray-25">
       <Header />
+      
       <LineAbsolute />
 
       
@@ -38,11 +42,9 @@ export default function HomePage() {
             asd
           </header> */}
         <DashedLineContainer>
-         
+        
 
-        <div className="ellipsis !left-0 !top-auto !bottom-0 pc-37aetM undefined" data-v-ec8112a1="">
-            <div className="ellipsis-item" data-v-ec8112a1=""></div>
-          </div>
+   
           <VerticalDashedLine
             className="md:-left-10"
             width="calc(100% + 80px)"
@@ -144,18 +146,12 @@ export default function HomePage() {
              
             </div>
           </div>
+
       
           
       
 
-          <div className="flex items-center justify-center">
-            <div className="flex items-center justify-center gap-4 relative py-10 px-8">
-            
-
-
-             
-            </div>
-          </div>
+          
 
           <VerticalDashedLine />
 
@@ -176,10 +172,17 @@ export default function HomePage() {
               {/*<PlanetLine/> */}
             </div>
           </div>
-          <Stay />
+         {/* <Stay /> */}
         </DashedLineContainer>
+        
 
       
+      </div>
+      <div className=" container pointer-events-none mt-[250px]">
+        <div className="">
+        <StarField />
+        <CornedEarth />
+        </div>
       </div>
       <div className="container pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
         <div className="border-t border-color w-full">
