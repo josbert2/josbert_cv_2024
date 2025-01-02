@@ -1,21 +1,11 @@
-'use client'
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import Skill from '@/components/pages/skill'
 
-import StarField from '@/components/particles'
-export default function Test() {
- 
 
+export default function page() {
   return (
-    <div
-    
-    >
-      <div className=" container pointer-events-none mt-[750px]">
-        <div className="">
-        <StarField />
-        </div>
-      </div>
+    <div>
+        <Skill />
     </div>
-  );
-};
-
+  )
+}

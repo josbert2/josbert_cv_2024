@@ -19,6 +19,7 @@ import Travels from '@/components/Travels';
 import PlanetLine from '@/components/PlanetLine';
 import About from "@/components/pages/about";
 import Contact from "@/components/pages/contact";
+import Work from "@/components/pages/work";
 
 import Separator from "@/components/misc/separator";
 import Header from "@/components/header";
@@ -198,6 +199,7 @@ export default function HomePage() {
           </div>
       </div>
       <Separator/>
+      <Work/>
       <About/>
      
       <div className="relative">
