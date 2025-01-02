@@ -11,15 +11,17 @@ export default function Work() {
     });
     return (
         <>
-            <section ref={ref} className="container mt-20  sm:mt-20">
+            <section ref={ref} className="container mt-20 pb-20 relative  sm:mt-20">
                 <div className="px-20">
                     <motion.div
-                        className="btn-title relative pb-10 flex justify-start"
+                        className="btn-title relative w-full mb-16 flex justify-start container-btn"
                         initial={{ opacity: 0, x: -20 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.5, ease: [0.17, 0.55, 0.55, 1] }}
                     >
+                        <div className="framer-1u3alye"></div>
                        <ButtonSection title="Proyectos" />
+                       <div className="framer-4ek1z5"></div>
                     </motion.div>
                     <div className="grid grid-cols-2">
                         <div className="ssr-variant hidden-12gl4l4 hidden-7slepd">
@@ -219,6 +221,39 @@ export default function Work() {
                         </div>;
                     </div>
 
+                </div>
+                <div className="r-61otr absolute z-[-1] -bottom-40 opcacity-[0.1] right-[-218px] w-full h-full"
+                    style={{
+                        opacity: ".2"
+                    }}
+                >
+                    <div
+                        data-framer-background-image-wrapper="true"
+                        style={{
+                            borderRadius: "inherit",
+                            bottom: "0",
+                            left: "0",
+                            position: "absolute",
+                            right: "0",
+                            top: "0",
+                        }}>
+                        <img
+                            alt=""
+                            decoding="async"
+                            sizes="100vw"
+                            src="https://framerusercontent.com/images/5Gmglh77Ki1bjsZVWNsfAQDN8lk.png"
+                            srcSet="https://framerusercontent.com/images/5Gmglh77Ki1bjsZVWNsfAQDN8lk.png?scale-down-to=512 512w,https://framerusercontent.com/images/5Gmglh77Ki1bjsZVWNsfAQDN8lk.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/5Gmglh77Ki1bjsZVWNsfAQDN8lk.png 1920w"
+                            style={{
+                            borderRadius: "inherit",
+                            display: "block",
+                            height: "100%",
+                            imageRendering: "auto",
+                            objectFit: "cover",
+                            objectPosition: "center",
+                            width: "100%",
+                            }}
+                        />
+                    </div>;
                 </div>
             </section>
         </>
