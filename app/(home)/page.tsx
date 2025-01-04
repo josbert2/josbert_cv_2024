@@ -27,6 +27,8 @@ import LineAbsolute from "@/components/misc/lineAbsolute";
 import Stay from "@/components/misc/Stay";
 import CornedEarth from '@/components/corned-earth'
 import StarField  from "@/components/particles";
+import OpenWork from '@/components/open-work'
+import Presentacion from '@/components/presentacion'
 
 
 export default function HomePage() {
@@ -64,16 +66,7 @@ export default function HomePage() {
               <img className="rounded-[24px]" src="https://josbert.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperfil.41276050.jpg&w=1080&q=75" />
             </div>
           </div>
-          <h1 className={cn('text-title-h1 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-5 font-anurati')}>
-            Josbert Hernández
-           
-
-          </h1>
-          <h2 className="mb-0 text-gray-500 text-title-h5 font">
-            Creative Developer &
-            <br />
-            UI/UX Designer
-          </h2>
+          <Presentacion />
           <div className="">
             <div className="mx-auto h-8 w-full max-w-[596px] items-center gap-6 px-4 my-4 hidden md:flex xl:my-8">
          
@@ -104,7 +97,7 @@ export default function HomePage() {
 
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex items-center flex-col">
             <div
          
          
@@ -146,6 +139,7 @@ export default function HomePage() {
               </button>
              
             </div>
+            <OpenWork />
           </div>
 
       
