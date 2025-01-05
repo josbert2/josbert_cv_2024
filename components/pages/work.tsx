@@ -39,7 +39,7 @@ export default function Work() {
                                     opacity: "1",
                                     width: "100%",
                                 }}
-                                tabIndex="0"
+                              
                                 target="_blank">
                                 <div
                                     className="framer-1r8puyn"
@@ -176,7 +176,7 @@ export default function Work() {
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g
                                                 color="var(--token-49164ff2-888d-40c1-96fa-58a3e961b851, rgb(252, 252, 250))"
-                                                weight="regular">
+                                              >
                                                 <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
                                             </g>
                                             </svg>

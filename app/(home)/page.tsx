@@ -29,6 +29,8 @@ import CornedEarth from '@/components/corned-earth'
 import StarField  from "@/components/particles";
 import OpenWork from '@/components/open-work'
 import Presentacion from '@/components/presentacion'
+import Abstraccion from '@/components/abstraccion'
+import ParticulasAbstraccion from '@/components/particles-asbtraccion'
 
 
 export default function HomePage() {
@@ -194,12 +196,23 @@ export default function HomePage() {
       </div>
       <Separator/>
       <Work/>
-      <About/>
-     
-      <div className="relative">
-        <Contact/>
-      </div>
       
+     
+     {/* <div className="relative">
+        <Contact/>
+      </div> */}
+      <div className="h-[700px]">
+      
+      </div>
+      <div className="relative ">
+        <div className="transform translate-y-[261px] rotate-180">
+          <ParticulasAbstraccion />
+        </div>
+        <Abstraccion />
+      </div>
+      <div className="h-[700px] z-10 bg-[#1a1a1d]">
+      
+      </div>
     </div>
     
   )
