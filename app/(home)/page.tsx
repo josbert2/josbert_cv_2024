@@ -31,7 +31,7 @@ import OpenWork from '@/components/open-work'
 import Presentacion from '@/components/presentacion'
 import Abstraccion from '@/components/abstraccion'
 import ParticulasAbstraccion from '@/components/particles-asbtraccion'
-
+import AsteroidMotion from '@/components/Asteroide'
 
 export default function HomePage() {
   return (
@@ -41,7 +41,10 @@ export default function HomePage() {
       <LineAbsolute />
 
       
-      
+      <div className="pt-10 absolute top-0 left-0 h-full w-full">
+        {/*<AsteroidMotion /> */}
+      </div>
+    
       <div className="flex flex-col items-center text-center px-40 xl:px-72 py-32 z-[100]">
         {/*<header className="header-main absolute top-[17px] z-10 flex h-16 w-full items-center justify-between gap-4 bg-ln-gray-25 px-4 lg:h-auto lg:w-auto lg:justify-start lg:rounded-3xl lg:bg-ln-gray-0 lg:p-[18px] lg:shadow-ln-xs">
             asd
@@ -141,7 +144,7 @@ export default function HomePage() {
               </button>
              
             </div>
-            <OpenWork />
+            {/*<OpenWork /> */}
           </div>
 
       

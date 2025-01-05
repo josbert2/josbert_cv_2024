@@ -11,9 +11,9 @@ export default function CornedEarth() {
             <div className="framer-dw9aad" >
               <div className="framer-hh1l9l-container" data-framer-appear-id="hh1l9l" data-framer-name="Gradient"  style={{opacity: 1, willChange: 'transform', transform: 'perspective(1200px)'}}>
                 <div className="ssr-variant hidden-19ifihh hidden-1rdjywm">
-                  <div style={{width: '100%', height: '100%', overflow: 'hidden', backgroundColor: 'rgb(10, 10, 10)', transform: 'translateZ(0)', borderRadius: 0, position: 'relative'}}>
+                  <div style={{width: '100%', height: '100%', overflow: 'hidden', transform: 'translateZ(0)', borderRadius: 0, position: 'relative'}}>
                     <div id="Gradients">
-                      <div className="top-[-14px] relative">
+                      <div className="top-[-40px] flex justify-center relative">
                       <OscillatingCircles />
                       </div>
                     </div>

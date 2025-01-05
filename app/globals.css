@@ -1842,3 +1842,56 @@ body{
   position: absolute;
   will-change: var(--framer-will-change-override, transform);
  }
+
+
+ /* RESPONSIVE */
+
+@media (min-width: 1536px) {
+  .framer-11253p8{
+    width: 1438px !important;
+    left: calc(50.00000000000002% - 1441px / 2) !important;
+  }
+  .framer-qL3Nr .framer-ct3gpt {
+    aspect-ratio:0;
+    height: var(--framer-aspect-ratio-supported, 956px);
+   
+  }
+}
+
+.asteroid {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+}
+
+.framer-hdff1m-container{
+  flex: none;
+  height: 1px;
+  left: -100px;
+  opacity: .3;
+  position: absolute;
+  top: 70px;
+  transform: rotate(22.6deg);
+  width: 100px;
+  z-index: 2;
+}
+
+.framer-8wex7e {
+  height: 1px;
+  overflow: visible;
+  position: relative;
+  width: 100px;
+}
+.framer-16kciz9
+{
+  bottom: 0;
+  flex: none;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+}
