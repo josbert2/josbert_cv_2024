@@ -106,7 +106,7 @@ const presentacionTwo = () => {
                     </span>
                     </p>
                 </div>
-                </div>;
+                </div>
 
         </>
     )   
