@@ -178,7 +178,7 @@ export default function HomePage() {
 
       
       </div>
-      <div className=" container pointer-events-none mt-[250px]">
+      <div className=" container pointer-events-none mt-[225px]">
         <div className="">
         <StarField />
         <CornedEarth />

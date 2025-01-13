@@ -174,14 +174,14 @@ function StarField() {
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
-
+  
   return (
     <canvas
       ref={canvasRef}
       style={{
         display: 'block',
         position: 'absolute',
-        top: '466px',
+        top: '120px',
         left: 'calc(49% - 600px)', // Ajusta según tu layout
         width: '1200px',
         zIndex: 9999,
