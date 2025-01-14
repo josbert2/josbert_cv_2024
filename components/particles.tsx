@@ -181,7 +181,7 @@ function StarField() {
       style={{
         display: 'block',
         position: 'absolute',
-        top: '120px',
+        top: '-524px',
         left: 'calc(49% - 600px)', // Ajusta según tu layout
         width: '1200px',
         zIndex: 9999,

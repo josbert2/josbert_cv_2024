@@ -1,11 +1,12 @@
 import React from 'react'
 import OscillatingCircles from '@/components/circle-animation'
-import StarField from '@/components/particles'
+
 
 export default function CornedEarth() {
   return (
     <>
         <div className="relative">
+  
           <div className="framer-qL3Nr transform scale-[1.065]">
             <div className="framer-11253p8">
             <div className="framer-dw9aad" >

@@ -26,12 +26,14 @@ import Header from "@/components/header";
 import LineAbsolute from "@/components/misc/lineAbsolute";
 import Stay from "@/components/misc/Stay";
 import CornedEarth from '@/components/corned-earth'
-import StarField  from "@/components/particles";
+
 import OpenWork from '@/components/open-work'
 import Presentacion from '@/components/presentacion'
 import Abstraccion from '@/components/abstraccion'
 import ParticulasAbstraccion from '@/components/particles-asbtraccion'
 import AsteroidMotion from '@/components/Asteroide'
+import StarField from '@/components/particles'
+
 
 export default function HomePage() {
   return (
@@ -178,10 +180,12 @@ export default function HomePage() {
 
       
       </div>
-      <div className=" container pointer-events-none mt-[225px]">
+      <div className=" container pointer-events-none mt-[225px] ">
+      
+     
         <div className="">
-        <StarField />
-        <CornedEarth />
+          <StarField />   
+          <CornedEarth />
         </div>
       </div>
       <div className="container pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
