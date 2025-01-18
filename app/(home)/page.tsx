@@ -8,7 +8,7 @@ import {
   HorizontalDashedLine,
   VerticalDashedLine,
 } from "./page.client"
-import { Instagram, Github, Linkedin,Codepen, Twitter } from 'lucide-react';
+
 
 import localFont from 'next/font/local';
 import { cn } from '@/utils/cn';
@@ -33,7 +33,7 @@ import Abstraccion from '@/components/abstraccion'
 import ParticulasAbstraccion from '@/components/particles-asbtraccion'
 import AsteroidMotion from '@/components/Asteroide'
 import StarField from '@/components/particles'
-
+import Rrss from '@/components/Rrss'
 
 export default function HomePage() {
   return (
@@ -104,50 +104,8 @@ export default function HomePage() {
 
           </div>
 
-          <div className="flex items-center flex-col">
-            <div
-         
-         
-              className="relative mb-8 isolate grid  auto-cols-fr grid-flow-col gap-1 rounded-10 bg-bg-weak-50 p-1 mb-3"
-          
-             
-              style={{ outline: "none" }}
-            >
-             
-              
-              <button
-               
-                className=" bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
-              
-              >
-                <Github className="text-[#9b9b9b] w-4 h-4" />
-              </button>
-              <button
-              
-                className="  bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
-              
-              >
-                <Instagram className="text-[#9b9b9b] w-4 h-4" />
-              </button>
-              <button
-                className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
-              >
-                <Linkedin className="text-[#9b9b9b] w-4 h-4" />
-              </button>
-              <button
-                className="   bg-ln-gray-0 relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
-              >
-                <Codepen className="text-[#9b9b9b] w-4 h-4" />
-              </button>
-              <button
-                className="   bg-ln-gray-0  relative z-10 h-8 whitespace-nowrap rounded-md px-2 text-label-sm text-text-soft-400 outline-none flex items-center justify-center gap-1.5 transition duration-300 ease-out focus:outline-none data-[state=active]:text-text-strong-950 aspect-square"
-              >
-                <Twitter className="text-[#9b9b9b] w-4 h-4" />
-              </button>
-             
-            </div>
+            {/*<Rrss /> */}
             {/*<OpenWork /> */}
-          </div>
 
       
           
@@ -215,7 +173,7 @@ export default function HomePage() {
         <div className="transform translate-y-[261px] rotate-180">
           <ParticulasAbstraccion />
         </div>
-        <Abstraccion />
+       {/* <Abstraccion /> */}
       </div>
       <div className="h-[700px] z-10 bg-[#1a1a1d]">
       

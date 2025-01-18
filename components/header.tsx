@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import AsteroidMotion from '@/components/Asteroide'
+
 
 const DynamicThemeSwitch = dynamic(() => import('./theme-switch'), {
   ssr: false,
@@ -33,6 +35,7 @@ export default function Header() {
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1],   delay: 0.1, }} // Transición suave
     >
            
+            {/*<AsteroidMotion /> */}
           
             {/*<div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-l bleed-ln-gray-200 mac:block">
               <img

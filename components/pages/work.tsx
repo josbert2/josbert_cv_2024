@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import ButtonSection from '../button-section';
 import Image from 'next/image'
 
-import Projecto from '@/assets/project-1.png'
+import Projecto from '@/assets/project-1.webp'
 import Projecto2 from '@/assets/project-2.png'
 
 
@@ -19,16 +19,16 @@ export default function Work() {
 
     const dataProject = [
         {
-            title: "Glide",
-            description: "Navigate the world of web technology",
+            title: "Entrekids",
+            description: "Entrekids",
             image: Projecto,
-            type: "iOS App"
+            type: "Web APP"
         },
         {
-            title: "Glide",
+            title: "Bookforce",
             description: "Navigate the world of web technology",
             image: Projecto2,
-            type: "iOS App"
+            type: "Web APP"
         }
     ]
 
@@ -286,6 +286,7 @@ export default function Work() {
                                             textShadow: "rgba(0, 0, 0, 0.2) 0px 4px 9px",
                                             transform: "none",
                                         }}>
+                                            
                                         <p
                                             className="framer-text"
                                             style={{

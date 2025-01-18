@@ -1903,6 +1903,8 @@ body{
     scroll-margin-top: 40px;
     width: 100%;
     z-index: 2;
+    justify-self: center;
+  
 }
 
 .framer-1hhlnuq-container {

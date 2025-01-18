@@ -29,6 +29,7 @@ const asteroidVariants = {
 };
 
 const generateRandomStartPosition = () => {
+    if (typeof window === 'undefined') return { x: -500, y: 0 };
     return {
         x: -500, // Start from the left of the screen
         y: Math.random() * window.innerHeight / 2 - window.innerHeight / 2, // Random vertical position
@@ -38,7 +39,7 @@ const generateRandomStartPosition = () => {
 
 const AsteroidMotion = () => {
     const [asteroids, setAsteroids] = React.useState([]);
-    const asteroidLimit = 1; // Limit the number of asteroids
+    const asteroidLimit = 4; // Limit the number of asteroids
     
     React.useEffect(() => {
         const interval = setInterval(() => {
