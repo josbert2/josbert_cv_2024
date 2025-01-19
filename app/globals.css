@@ -2109,3 +2109,38 @@ body{
 .framer-2hmlbu:hover{
   opacity: 1;
 }
+
+.framer-1augxt8 {
+    align-content: center;
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 62px;
+    justify-content: center;
+    left: calc(50.00000000000002% - 509px / 2);
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    width: 509px;
+}
+
+ .framer-obe0ej-container {
+  flex: none;
+  height: 62px;
+  position: relative;
+  width: 100%;
+}
+
+.framer-1tltcml, .framer-Emdph .framer-1tcxtaf, .framer-Emdph .framer-1traebw, .framer-Emdph .framer-1iu7w7r, .framer-Emdph .framer-goisdy, .framer-Emdph .framer-11n8fy6, .framer-Emdph .framer-1bxte5q, .framer-Emdph .framer-189l4rc, .framer-Emdph .framer-47sbco {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  box-shadow: 0 .6021873017743928px .6021873017743928px -1.25px #0006, 0 2.288533303243457px 2.288533303243457px -2.5px #0000005b, 0 10px 10px -3.75px #00000024;
+  height: var(--framer-aspect-ratio-supported, 40px);
+  overflow: visible;
+  position: relative;
+  width: 40px;
+}
