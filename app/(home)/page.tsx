@@ -1,9 +1,9 @@
 import {
-  BecomeSponsor,
+  //BecomeSponsor,
   DashedCircle,
   DashedLineContainer,
-  Feature,
-  GetStarted,
+  //Feature,
+  //GetStarted,
  
   HorizontalDashedLine,
   VerticalDashedLine,
@@ -16,24 +16,25 @@ import { DotPattern } from "@/components/dot-pattern";
 
 
 import Travels from '@/components/Travels';
-import PlanetLine from '@/components/PlanetLine';
-import About from "@/components/pages/about";
-import Contact from "@/components/pages/contact";
+//import PlanetLine from '@/components/PlanetLine';
+//import About from "@/components/pages/about";
+//import Contact from "@/components/pages/contact";
 import Work from "@/components/pages/work";
 
 import Separator from "@/components/misc/separator";
 import Header from "@/components/header";
 import LineAbsolute from "@/components/misc/lineAbsolute";
-import Stay from "@/components/misc/Stay";
+//import Stay from "@/components/misc/Stay";
 import CornedEarth from '@/components/corned-earth'
 
-import OpenWork from '@/components/open-work'
+//import OpenWork from '@/components/open-work'
 import Presentacion from '@/components/presentacion'
-import Abstraccion from '@/components/abstraccion'
+//import Abstraccion from '@/components/abstraccion'
 import ParticulasAbstraccion from '@/components/particles-asbtraccion'
-import AsteroidMotion from '@/components/Asteroide'
+//import AsteroidMotion from '@/components/Asteroide'
 import StarField from '@/components/particles'
-import Rrss from '@/components/Rrss'
+//import Rrss from '@/components/Rrss'
+import MarqueeHtml from '@/components/marquee'
 
 export default function HomePage() {
   return (
@@ -101,10 +102,13 @@ export default function HomePage() {
                 </svg>
                 </div>
             </div>
-
+            <div className="pb-4">
+              <MarqueeHtml />
+            </div>
           </div>
 
             {/*<Rrss /> */}
+            
             {/*<OpenWork /> */}
 
       

@@ -1,7 +1,5 @@
 import type { ReactNode } from "react"
 
-import { Footer, Header } from "./layout.client"
-
 export default function Layout({
   children,
 }: {

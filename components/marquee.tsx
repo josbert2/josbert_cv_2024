@@ -1,81 +1,326 @@
-import Marquee from "@/components/marquee";
+'use client'
+import React, { useRef, useState, useEffect } from "react";
+import { motion } from "motion/react";
 
+const tools = [
+  {
+    "id": 1,
+    "label": "Icon",
+    "wrapperClass": "framer-1tltcml",
+    "dataFramerName": "Tool1",
+    "name": "Tool1",
+    "imgSrc": "https://framerusercontent.com/images/U4uEM64hE0jpeXWU7oQnAJ0t3w.png"
+  },
+  {
+    "id": 2,
+    "label": "Icon",
+    "wrapperClass": "framer-1tcxtaf",
+    "dataFramerName": "Tool2",
+    "name": "Tool2",
+    "imgSrc": "https://framerusercontent.com/images/YWcP2W5U3RNsyQzTRoW9XnBSL4Q.png"
+  },
+  {
+    "id": 3,
+    "label": "Icon",
+    "wrapperClass": "framer-1traebw",
+    "dataFramerName": "Tool3",
+    "name": "Tool3",
+    "imgSrc": "https://framerusercontent.com/images/uTqJRvTpxtFFq0ScpK5XjPLbSk.png"
+  },
+  {
+    "id": 4,
+    "label": "Icon",
+    "wrapperClass": "framer-1iu7w7r",
+    "dataFramerName": "Tool4",
+    "name": "Tool4",
+    "imgSrc": "https://framerusercontent.com/images/biOHrT9Rj4WyodSqjmfmg6BCBk.png"
+  },
+  {
+    "id": 5,
+    "label": "Icon",
+    "wrapperClass": "framer-goisdy",
+    "dataFramerName": "Tool5",
+    "name": "Tool5",
+    "imgSrc": "https://framerusercontent.com/images/RN13Jbe1UCpcj2BfwLRaAVrNVXM.png"
+  },
+  {
+    "id": 6,
+    "label": "Icon",
+    "wrapperClass": "framer-11n8fy6",
+    "dataFramerName": "Tool6",
+    "name": "Tool6",
+    "imgSrc": "https://framerusercontent.com/images/7yqHqHrtdNC9RKecSqDC3FygaaM.png"
+  },
+  {
+    "id": 7,
+    "label": "Icon",
+    "wrapperClass": "framer-1bxte5q",
+    "dataFramerName": "Tool7",
+    "name": "Tool7",
+    "imgSrc": "https://framerusercontent.com/images/IhARhAMNUNSYXrW0SD6Uhty6Egw.png"
+  },
+  {
+    "id": 8,
+    "label": "Icon",
+    "wrapperClass": "framer-189l4rc",
+    "dataFramerName": "Tool8",
+    "name": "Tool8",
+    "imgSrc": "https://framerusercontent.com/images/iVzaCn1DRm8KBrYvIoG9dcAnKHY.png"
+  },
+  {
+    "id": 9,
+    "label": "Icon",
+    "wrapperClass": "framer-47sbco",
+    "dataFramerName": "Tool9",
+    "name": "Tool9",
+    "imgSrc": "https://framerusercontent.com/images/DCaJezx8M3GlKYKkt801HBQK8Y.png"
+  },
+  {
+    "id": 1,
+    "label": "Icon",
+    "wrapperClass": "framer-1tltcml",
+    "dataFramerName": "Tool1",
+    "name": "Tool1",
+    "imgSrc": "https://framerusercontent.com/images/U4uEM64hE0jpeXWU7oQnAJ0t3w.png"
+  },
+  {
+    "id": 2,
+    "label": "Icon",
+    "wrapperClass": "framer-1tcxtaf",
+    "dataFramerName": "Tool2",
+    "name": "Tool2",
+    "imgSrc": "https://framerusercontent.com/images/YWcP2W5U3RNsyQzTRoW9XnBSL4Q.png"
+  },
+  {
+    "id": 3,
+    "label": "Icon",
+    "wrapperClass": "framer-1traebw",
+    "dataFramerName": "Tool3",
+    "name": "Tool3",
+    "imgSrc": "https://framerusercontent.com/images/uTqJRvTpxtFFq0ScpK5XjPLbSk.png"
+  },
+  {
+    "id": 4,
+    "label": "Icon",
+    "wrapperClass": "framer-1iu7w7r",
+    "dataFramerName": "Tool4",
+    "name": "Tool4",
+    "imgSrc": "https://framerusercontent.com/images/biOHrT9Rj4WyodSqjmfmg6BCBk.png"
+  },
+  {
+    "id": 5,
+    "label": "Icon",
+    "wrapperClass": "framer-goisdy",
+    "dataFramerName": "Tool5",
+    "name": "Tool5",
+    "imgSrc": "https://framerusercontent.com/images/RN13Jbe1UCpcj2BfwLRaAVrNVXM.png"
+  },
+  {
+    "id": 6,
+    "label": "Icon",
+    "wrapperClass": "framer-11n8fy6",
+    "dataFramerName": "Tool6",
+    "name": "Tool6",
+    "imgSrc": "https://framerusercontent.com/images/7yqHqHrtdNC9RKecSqDC3FygaaM.png"
+  },
+  {
+    "id": 7,
+    "label": "Icon",
+    "wrapperClass": "framer-1bxte5q",
+    "dataFramerName": "Tool7",
+    "name": "Tool7",
+    "imgSrc": "https://framerusercontent.com/images/IhARhAMNUNSYXrW0SD6Uhty6Egw.png"
+  },
+  {
+    "id": 8,
+    "label": "Icon",
+    "wrapperClass": "framer-189l4rc",
+    "dataFramerName": "Tool8",
+    "name": "Tool8",
+    "imgSrc": "https://framerusercontent.com/images/iVzaCn1DRm8KBrYvIoG9dcAnKHY.png"
+  },
+  {
+    "id": 9,
+    "label": "Icon",
+    "wrapperClass": "framer-47sbco",
+    "dataFramerName": "Tool9",
+    "name": "Tool9",
+    "imgSrc": "https://framerusercontent.com/images/DCaJezx8M3GlKYKkt801HBQK8Y.png"
+  },
+  {
+    "id": 1,
+    "label": "Icon",
+    "wrapperClass": "framer-1tltcml",
+    "dataFramerName": "Tool1",
+    "name": "Tool1",
+    "imgSrc": "https://framerusercontent.com/images/U4uEM64hE0jpeXWU7oQnAJ0t3w.png"
+  },
+  {
+    "id": 2,
+    "label": "Icon",
+    "wrapperClass": "framer-1tcxtaf",
+    "dataFramerName": "Tool2",
+    "name": "Tool2",
+    "imgSrc": "https://framerusercontent.com/images/YWcP2W5U3RNsyQzTRoW9XnBSL4Q.png"
+  },
+  {
+    "id": 3,
+    "label": "Icon",
+    "wrapperClass": "framer-1traebw",
+    "dataFramerName": "Tool3",
+    "name": "Tool3",
+    "imgSrc": "https://framerusercontent.com/images/uTqJRvTpxtFFq0ScpK5XjPLbSk.png"
+  },
+  {
+    "id": 4,
+    "label": "Icon",
+    "wrapperClass": "framer-1iu7w7r",
+    "dataFramerName": "Tool4",
+    "name": "Tool4",
+    "imgSrc": "https://framerusercontent.com/images/biOHrT9Rj4WyodSqjmfmg6BCBk.png"
+  },
+  {
+    "id": 5,
+    "label": "Icon",
+    "wrapperClass": "framer-goisdy",
+    "dataFramerName": "Tool5",
+    "name": "Tool5",
+    "imgSrc": "https://framerusercontent.com/images/RN13Jbe1UCpcj2BfwLRaAVrNVXM.png"
+  },
+  {
+    "id": 6,
+    "label": "Icon",
+    "wrapperClass": "framer-11n8fy6",
+    "dataFramerName": "Tool6",
+    "name": "Tool6",
+    "imgSrc": "https://framerusercontent.com/images/7yqHqHrtdNC9RKecSqDC3FygaaM.png"
+  },
+  {
+    "id": 7,
+    "label": "Icon",
+    "wrapperClass": "framer-1bxte5q",
+    "dataFramerName": "Tool7",
+    "name": "Tool7",
+    "imgSrc": "https://framerusercontent.com/images/IhARhAMNUNSYXrW0SD6Uhty6Egw.png"
+  },
+  {
+    "id": 8,
+    "label": "Icon",
+    "wrapperClass": "framer-189l4rc",
+    "dataFramerName": "Tool8",
+    "name": "Tool8",
+    "imgSrc": "https://framerusercontent.com/images/iVzaCn1DRm8KBrYvIoG9dcAnKHY.png"
+  },
+  {
+    "id": 9,
+    "label": "Icon",
+    "wrapperClass": "framer-47sbco",
+    "dataFramerName": "Tool9",
+    "name": "Tool9",
+    "imgSrc": "https://framerusercontent.com/images/DCaJezx8M3GlKYKkt801HBQK8Y.png"
+  }
+]
 export default function MarqueeHtml() {
-    return (
-        <>
-             <div className="framer-1augxt8" data-framer-name="IconsTicker" name="IconsTicker">
-        <div className="framer-obe0ej-container">
-          <section style={{display: 'flex', width: '100%', height: '100%', maxWidth: '100%', maxHeight: '100%', placeItems: 'center', margin: '0px', padding: '14px', listStyleType: 'none', opacity: 1, maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%)', overflow: 'hidden'}}>
-            <ul style={{display: 'flex', width: '100%', height: '100%', maxWidth: '100%', maxHeight: '100%', placeItems: 'center', margin: 0, padding: 0, listStyleType: 'none', textIndent: 'none', gap: '14px', position: 'relative', flexDirection: 'row', willChange: 'transform', transform: 'translateX(-0px)'}}>
-              
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-1tltcml" data-framer-name="Tool1" name="Tool1" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/U4uEM64hE0jpeXWU7oQnAJ0t3w.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-1tcxtaf" data-framer-name="Tool2" name="Tool2" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/YWcP2W5U3RNsyQzTRoW9XnBSL4Q.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-1traebw" data-framer-name="Tool3" name="Tool3" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/uTqJRvTpxtFFqf0ScpK5XjPLbSk.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-1iu7w7r" data-framer-name="Tool4" name="Tool4" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/biOHrT9Rj4WyodSqjmfmg6BCBk.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-goisdy" data-framer-name="Tool5" name="Tool5" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/RN13Jbe1UCpcj2BfwLRaAVrNVXM.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-11n8fy6" data-framer-name="Tool6" name="Tool6" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/7yqHqHrtdNC9RKecSqDC3FygaaM.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-1bxte5q" data-framer-name="Tool7" name="Tool7" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/IhARhAMNUNSYXrW0SD6Uhty6Egw.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-189l4rc" data-framer-name="Tool8" name="Tool8" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/iVzaCn1DRm8KBrYvIoG9dcAnKHY.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-                    <li aria-hidden="true" style={{willChange: 'transform'}}>
-                        <div aria-label="Icon" className="framer-47sbco" data-framer-name="Tool9" name="Tool9" style={{flexShrink: 0}}>
-                        <div data-framer-background-image-wrapper="true" style={{position: 'absolute', borderRadius: 'inherit', inset: '0px'}}>
-                            <img src="https://framerusercontent.com/images/DCaJezx8M3GlKYKkt801HBQK8Y.png" alt="" style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
-                        </div>
-                        </div>
-                    </li>
-             
-            </ul>
-          </section>
+  const marqueeRef = useRef(null);
+  const [oneSetWidth, setOneSetWidth] = useState(0);
+
+  // Velocidad en px/segundo
+  const speed = 15;
+
+  useEffect(() => {
+    if (marqueeRef.current) {
+      // El UL con los ítems duplicados
+      const fullWidth = marqueeRef.current.scrollWidth;
+      // "oneSetWidth" es la mitad (un set de 9 ítems)
+      setOneSetWidth(fullWidth / 2);
+    }
+  }, []);
+
+  // Calculamos la duración en función de la velocidad
+  const duration = oneSetWidth > 0 ? oneSetWidth / speed : 0;
+
+  return (
+    <div className="framer-1augxt8" data-framer-name="IconsTicker" name="IconsTicker">
+      <div className="framer-obe0ej-container">
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            height: "100%",
+            maxWidth: "100%",
+            maxHeight: "100%",
+            placeItems: "center",
+            margin: "0px",
+            padding: "14px",
+            listStyleType: "none",
+            opacity: 1,
+            maskImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%)",
+            overflow: "hidden",
+            position: "relative"
+          }}
+        >
+          <motion.ul
+            ref={marqueeRef}
+            style={{
+              display: "flex",
+              gap: "14px",
+              position: "absolute",
+              left: 0,
+              top: 0,
+              willChange: "transform"
+            }}
+            animate={oneSetWidth ? { x: [0, -oneSetWidth] } : {}}
+            transition={{
+              duration,          // Duración calculada en base a la velocidad
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            {/* Duplicamos el array */}
+            {[...tools, ...tools].map((item, index) => (
+              <li
+                key={index}
+                aria-hidden="true"
+                style={{
+                  listStyleType: "none",
+                  willChange: "transform"
+                }}
+              >
+                <div
+                  aria-label={item.label}
+                  className={item.wrapperClass}
+                  data-framer-name={item.dataFramerName}
+                  name={item.name}
+                  style={{ flexShrink: 0, width: 50, height: 50, position: "relative" }}
+                >
+                  <div
+                    data-framer-background-image-wrapper="true"
+                    style={{
+                      position: "absolute",
+                      borderRadius: "inherit",
+                      inset: "0px"
+                    }}
+                  >
+                    <img
+                      src={item.imgSrc}
+                      alt=""
+                      style={{
+                        display: "block",
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "inherit",
+                        objectPosition: "center center",
+                        objectFit: "cover",
+                        imageRendering: "auto"
+                      }}
+                    />
+                  </div>
+                </div>
+              </li>
+            ))}
+          </motion.ul>
         </div>
       </div>
-        </>
-    )
+    </div>
+  );
 }

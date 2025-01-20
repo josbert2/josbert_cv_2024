@@ -2124,7 +2124,7 @@ body{
     left: calc(50.00000000000002% - 509px / 2);
     overflow: visible;
     padding: 0;
-    position: absolute;
+    margin: 0 auto;
     width: 509px;
 }
 

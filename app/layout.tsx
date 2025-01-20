@@ -4,9 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { cn } from '@/utils/cn';
-import { Provider as TooltipProvider } from '@/components/ui/tooltip';
-import { NotificationProvider } from '@/components/ui/notification-provider';
-import Header from '@/components/header';
+
 
 const inter = FontSans({
   subsets: ['latin'],
@@ -49,15 +47,15 @@ export default function RootLayout({
     >
       <body className="bg-ln-gray-25 dark">
         <ThemeProvider attribute='class'>
-          <TooltipProvider>
+         
            
               
 
               {children}
         
-          </TooltipProvider>
+    
         </ThemeProvider>
-        <NotificationProvider />
+      
       </body>
     </html>
   );
