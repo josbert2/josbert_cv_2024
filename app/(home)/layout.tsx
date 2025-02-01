@@ -7,7 +7,7 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <>
-    
+
       {children}
       
     </>
