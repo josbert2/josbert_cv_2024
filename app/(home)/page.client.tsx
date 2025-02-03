@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import React, { useState, useEffect } from "react";
+import Image from "next/image"
 import { motion, useAnimation } from "motion/react"
 import Header from "@/components/header";
 import { cn } from "@/lib/cn"
@@ -10,6 +11,7 @@ import { DotPattern } from "@/components/dot-pattern";
 import Presentacion from '@/components/presentacion'
 import MarqueeHtml from '@/components/marquee'
 import Travels from '@/components/Travels';
+
 
 
 const DashedLineContainer = ({ children }: { children: React.ReactNode }) => {
@@ -721,6 +723,247 @@ const UserTravels = () => {
 }
 
 
+const AboutMe = () => {
+  return (
+    <>
+      <div className="container pointer-events-none  -z-10 select-none mac:block">
+        <section className="framer-bvzlds" >
+          <div className="framer-h6odpz grid-col-2" >
+              <div className="framer-1n4bwt" >
+                  <div className="framer-9ydxhr">
+                      <div className="ssr-variant hidden-upi8ji">
+                          <div
+                              className="framer-uzhzb6"
+                            
+                              style={{
+                                outline: "none",
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-start",
+                                flexShrink: 0,
+                                transform: "none",
+                              }}
+                              
+                          >
+                              <h2
+                                  style={{
+                                    "--font-selector": "SW50ZXItTWVkaXVt",
+                                    "--framer-font-family": "'Inter', 'Inter Placeholder', sans-serif",
+                                    "--framer-font-size": "44px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-text-alignment": "left",
+                                    "--framer-text-color": "var(--token-a2d601b2-39bf-470a-bb5f-61bc109d99fd, rgba(255, 255, 255, 0.9))",
+                                  }}
+                                  className="framer-text"
+                              >
+                                  <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}>More</span> <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}>about</span>
+                                  <span style={{ "--font-selector": "SW50ZXItU2VtaUJvbGQ=", "--framer-font-weight": "600", "--framer-text-color": "rgb(255, 255, 255)" }} className="framer-text">
+                                      <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}></span> <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}></span>
+                                  </span>
+                                  <span
+                                      style={{
+                                        "--font-selector": "R0Y7SW5zdHJ1bWVudCBTZXJpZi1pdGFsaWM=",
+                                        "--framer-font-family": "'Instrument Serif', 'Instrument Serif Placeholder', serif",
+                                        "--framer-font-style": "italic",
+                                        "--framer-font-weight": "400",
+                                        "--framer-text-color": "var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgba(255, 255, 255, 0.6))",
+                                      }}
+                                      className="framer-text"
+                                  >
+                                      <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}>myself</span>
+                                  </span>
+                              </h2>
+                          </div>
+                      </div>
+                      <div
+                          className="framer-11blnjb"
+                          data-framer-name="Become part of something useful, In chart goat university we help each other and learn from each other everyday"
+                          style={{
+                            outline: "none",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-start",
+                            flexShrink: 0,
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                      >
+                          <p className="framer-text framer-styles-preset-1kvyxmc" data-styles-preset="n7RLEGRKm">
+                              <span style={{ display: "inline-block", opacity: 1, transform: "none", willChange: "transform" }}>Hi, i am josbert i am web developer frontend and creative enginer desing</span> 
+                             
+                          </p>
+                      </div>
+                  </div>
+                  <div className="framer-6iz3g2-container">
+                      <div className="ssr-variant hidden-upi8ji">
+                  
+                          <a
+                              className="framer-vzqVw framer-lJ39E framer-26mb0f framer-v-26mb0f framer-1xyivzk"
+                              data-border="true"
+                              style={{
+                                "--border-bottom-width": "1px",
+                                "--border-color": "rgb(41, 43, 43)",
+                                "--border-left-width": "1px",
+                                "--border-right-width": "1px",
+                                "--border-style": "solid",
+                                "--border-top-width": "1px",
+                                backdropFilter: "blur(5px)",
+                                background: "linear-gradient(180deg, var(--token-f213e283-24d0-40a3-a2dc-bca1da07b971, rgb(20, 20, 20)) /* {&quot;name&quot;:&quot;UI | 1&quot;} */ 0%, var(--token-5970a3c6-0f13-482e-8fb6-b8cb7d627b04, rgba(255, 255, 255, 0.07)) /* {&quot;name&quot;:&quot;border&quot;} */ 100%)",
+                                borderRadius: "120px",
+                                boxShadow: "rgba(0, 0, 0, 0.68) 0px -0.48175px 0.48175px -1.25px inset, rgba(0, 0, 0, 0.596) 0px -1.83083px 1.83083px -2.5px inset, rgba(0, 0, 0, 0.235) 0px -8px 8px -3.75px inset",
+                                opacity: 1,
+                              }}
+                              href="https://cal.com/rick/get-rick-rolled?date=2024-12-24&amp;month=2024-12"
+                              target="_blank"
+                              rel="noopener"
+                              data-framer-name="Variant 1"
+                          >
+                              <div className="framer-1t4k9dk-container" style={{ opacity: 0.6, willChange: "transform" }}>
+                                  <div style={{ display: "contents" }}>
+                                      <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 256 256"
+                                          focusable="false"
+                                          color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                                          style={{
+                                            userSelect: "none",
+                                            width: "100%",
+                                            height: "100%",
+                                            display: "inline-block",
+                                            fill: "var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))",
+                                            color: "var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))",
+                                            flexShrink: 0,
+                                          }}
+                                      >
+                                          <g color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))">
+                                              <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
+                                          </g>
+                                      </svg>
+                                  </div>
+                              </div>
+                              <div
+                                  className="framer-1bph33e"
+                                  style={{
+                                    outline: "none",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "flex-start",
+                                    flexShrink: 0,
+                                    "--extracted-r6o4lv": "var(--token-a2d601b2-39bf-470a-bb5f-61bc109d99fd, rgba(255, 255, 255, 0.9))",
+                                    "--framer-paragraph-spacing": "0px",
+                                    opacity: 0.6,
+                                    transform: "none",
+                                    willChange: "transform",
+                                  }}
+                                  data-framer-component-type="RichTextContainer"
+                              >
+                                  <p
+                                      className="framer-text framer-styles-preset-1kvyxmc"
+                                      data-styles-preset="n7RLEGRKm"
+                                      style={{ "--framer-text-color": "var(--extracted-r6o4lv, var(--token-a2d601b2-39bf-470a-bb5f-61bc109d99fd, rgba(255, 255, 255, 0.9)))" }}
+                                  >
+                                      Contact Me
+                                  </p>
+                              </div>
+                          </a>
+                          
+                      </div>
+                  </div>
+              </div>
+              <div className="framer-1nqcbjd w-full" data-framer-name="section" >
+                  <div className="ssr-variant hidden-7lwtj4 hidden-upi8ji  w-full">
+                      <div className="framer-1l6nomv-container" data-framer-name="card 1" id="1l6nomv">
+                          <div
+                            
+                              className="framer-NoRSJ framer-1ln1adt framer-v-1ln1adt"
+                              data-highlight="true"
+                              style={{
+                                backgroundColor: "var(--token-f213e283-24d0-40a3-a2dc-bca1da07b971, rgb(20, 20, 20))",
+                                width: "100%",
+                                opacity: 1,
+                                borderRadius: "24px",
+                              }}
+                          
+                              data-framer-name="Variant 1"
+                          >
+                              <div className="framer-1acgu6t" data-framer-name="content" style={{ opacity: 1, borderRadius: "16px" }}>
+                                  <div className="framer-69mjuu" data-framer-name="thumbnail" style={{ filter: "brightness(1)", borderRadius: "16px", transform: "none", transformOrigin: "50% 50% 0px", willChange: "transform" }}>
+                                      <div style={{ position: "absolute", borderRadius: "inherit", top: 0, right: 0, bottom: 0, left: 0 }} data-framer-background-image-wrapper="true">
+                                          <Image
+                                            src="https://framerusercontent.com/images/2tsEoalKV0gW67C7KEF0opYwC4U.jpg?scale-down-to=1024"
+                                            style={{
+                                              display: "block",
+                                              width: "100%",
+                                              height: "100%",
+                                              borderRadius: "inherit",
+                                              objectPosition: "center",
+                                              objectFit: "cover",
+                                            }}
+                                            width={500}
+                                            height={500}
+                                            alt="Picture of the author"
+                                            />
+                                      
+                                      </div>
+                                  </div>
+                                  <div className="framer-fnoddg-container" style={{ opacity: 1 }}>
+                                      <div style={{ display: "inline-block", transform: "none" }}>
+                                          <div className="framer-TETrW framer-1i145ng framer-v-1i145ng" data-framer-name="Variant 1" style={{ height: "100%", width: "100%", opacity: 1 }}>
+                                              <div
+                                                  data-framer-component-type="SVG"
+                                                  data-framer-name="play btn"
+                                                  style={{
+                                                    imageRendering: "pixelated",
+                                                    flexShrink: 0,
+                                                    fill: "rgb(0, 0, 0)",
+                                                    color: "rgb(0, 0, 0)",
+                                                    transform: "rotate(3deg)",
+                                                    opacity: 1,
+                                                  }}
+                                                  className="framer-37jcy4"
+                                                  aria-hidden="true"
+                                              >
+                                                  <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                                                      <svg style={{ width: "100%", height: "100%" }} viewBox="0 0 82 82" preserveAspectRatio="none" width="100%" height="100%"><use href="#svg-797516101_2247"></use></svg>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="framer-125ssij" data-framer-name="bacgk blur" ></div>
+              </div>
+          </div>
+          <div className="framer-1kpnfyz" data-framer-name="overlay" ></div>
+          <div className="framer-18ifhg6" data-framer-name="grid bg" >
+              <div
+                  style={{
+                    position: "absolute",
+                    borderRadius: "inherit",
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    backgroundRepeat: "repeat",
+                    backgroundPosition: "left top",
+                    backgroundSize: "46.62px auto",
+                    backgroundImage: "url(https://framerusercontent.com/images/VfkEna8iRjS9ZbXeCG1MRu3r0w.svg)",
+                    border: 0,
+                  }}
+                  data-framer-background-image-wrapper="true"
+              ></div>
+          </div>
+          
+        </section>
+      </div>
+    </>
+  )
+}
+
+
 export {
   VerticalDashedLine,
   HorizontalDashedLine,
@@ -733,5 +976,6 @@ export {
   HeaderUser,
   LineAbsolute,
   HeroSection,
-  UserTravels
+  UserTravels,
+  AboutMe
 }

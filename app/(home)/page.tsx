@@ -10,7 +10,8 @@ import {
   HeaderUser,
   LineAbsolute,
   HeroSection,
-  UserTravels
+  UserTravels,
+  AboutMe
 } from "./page.client"
 
 
@@ -71,6 +72,9 @@ export default function HomePage() {
 
         {/* SEPARATOR */}
         <Separator/>
+
+        {/* About me */}
+        <AboutMe/>
 
         <Work/>
 

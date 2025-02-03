@@ -2,7 +2,7 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ['https://www.jopcmelo.dev/'],
+    domains: ['https://www.jopcmelo.dev/', 'framerusercontent.com'],
   },
   experimental: {
     reactCompiler: true,

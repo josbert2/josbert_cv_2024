@@ -9,9 +9,19 @@ import Projecto from '@/assets/project-1.webp'
 import Projecto2 from '@/assets/project-2.png'
 
 
+import p1 from '@/assets/p1.webp'
+import p2 from '@/assets/p2.webp'
+import p3 from '@/assets/p3.webp'
+import p4 from '@/assets/p3.jpeg'
+
+
+
+import test from '@/assets/test.jpeg'
+import test2 from '@/assets/test2.png'
+
 
 export default function Work() {
-    const [isHovered, setIsHovered] = useState(false);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [ref, inView] = useInView({
         threshold: 0.2, 
         triggerOnce: true, 
@@ -21,15 +31,31 @@ export default function Work() {
         {
             title: "Entrekids",
             description: "Entrekids",
-            image: Projecto,
-            type: "Web APP"
+            image: test,
+            type: "Web APP",
+            url: "#"
         },
         {
             title: "Bookforce",
             description: "Navigate the world of web technology",
-            image: Projecto2,
-            type: "Web APP"
-        }
+            image: p4,
+            type: "Web APP",
+            url: "#"
+        },
+        {
+            title: "Criptovision",
+            description: "End-to-end Blockchain Services",
+            image: p3,
+            type: "Web 3 App",
+            url: "https://criptovision.com/"
+        },
+        {
+            title: "Bookforce",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "#"
+        },
     ]
 
 
@@ -61,8 +87,8 @@ export default function Work() {
                              }}>
                                 <a
                                     className="framer-rtsKZ framer-6pxgjl framer-v-6pxgjl framer-d4tf0f"
-                                    onMouseEnter={() => setIsHovered(true)}
-                                    onMouseLeave={() => setIsHovered(false)}
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
                                     href="./projects/glide"
                                     style={{
                                         backgroundColor: "rgba(21, 22, 23, 0)",
@@ -102,7 +128,7 @@ export default function Work() {
                                     <motion.div
                                     className="framer-2hmlbu"
                                     data-framer-name="BlurImage"
-                                    animate={{ opacity: isHovered ? 1 : 0 }}
+                                    animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
                                     initial={{ opacity: 0 }}
                                     whileHover={{ opacity: 1 }}
                                     style={{
@@ -292,7 +318,7 @@ export default function Work() {
                                             style={{
                                             "--font-selector": "RlM7R2VuZXJhbCBTYW5zLXNlbWlib2xk",
                                             "--framer-font-family":
-                                                "'General Sans', 'General Sans Placeholder', sans-serif",
+                                                "'__Inter_d65c78', 'General Sans Placeholder', sans-serif",
                                             "--framer-font-size": "32px",
                                             "--framer-font-weight": "600",
                                             "--framer-letter-spacing": "-0.02em",
