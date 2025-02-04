@@ -1051,7 +1051,45 @@ body {
   --token-3b2f60dc-5218-435c-8500-82085cdc151e: rgb(15, 15, 15);
   --token-25404318-aac1-4864-889c-46bc5f01d7b8: rgb(29, 155, 240);
 }
+@keyframes smoothOrbit {
+  0% {
+    transform: perspective(1200px) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: perspective(1200px) rotate(1deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: perspective(1200px) rotate(-1deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: perspective(1200px) rotate(1deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: perspective(1200px) rotate(0deg);
+    opacity: 0.8;
+  }
+}
 
+.framer-qL3Nr .framer-9dhxaz {
+  /* Mantén las demás propiedades que ya existan en tu CSS para este elemento. */
+
+  /* Ajusta el punto de rotación para que gire en torno a un “eje”. 
+     Por defecto es el centro, pero puedes moverlo para dar la sensación
+     de órbita alrededor de un punto diferente. */
+  transform-origin: 50% 50%;
+  
+  /* Animación */
+  animation: smoothOrbit 30s linear infinite;
+  /* 
+    - 30s => duración de la animación (ajusta según la velocidad que quieras).
+    - linear => movimiento uniforme (sin aceleración ni desaceleración).
+    - infinite => se repite continuamente.
+  */
+}
 .framer-qL3Nr .framer-11253p8 {
  /* background-color: var(--token-0a0787f4-acc7-4c77-bc44-5077db5742f9, var(--bg-background-body));*/
   bottom: -100px;

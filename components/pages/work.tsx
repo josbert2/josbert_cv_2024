@@ -33,29 +33,229 @@ export default function Work() {
             description: "Entrekids",
             image: test,
             type: "Web APP",
-            url: "#"
+            url: "#",
+            repository: "#"
         },
         {
             title: "Bookforce",
             description: "Navigate the world of web technology",
             image: p4,
             type: "Web APP",
-            url: "#"
+            url: "#",
+            repository: "#"
         },
         {
             title: "Criptovision",
             description: "End-to-end Blockchain Services",
             image: p3,
             type: "Web 3 App",
-            url: "https://criptovision.com/"
+            url: "https://criptovision.com/",
+            repository: "#"
         },
         {
             title: "Bookforce",
             description: "Navigate the world of web technology",
             image: test2,
             type: "Web APP",
-            url: "#"
+            url: "#",
+            repository: "#"
         },
+
+        // MILL
+
+        {
+            title: "MILL",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "#",
+            repository: "https://github.com/josbert2/Mill"
+        },
+
+        // Product APP
+
+        {
+            title: "Product APP",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "#",
+            repository: "https://github.com/josbert2/product"
+        },
+
+        // Solo Llantas
+
+        {
+            title: "Solo Llantas",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/llanta/shop.html#",
+            repository: "https://github.com/josbert2/llanta"
+        },
+
+        // Motoo Apartaments
+
+        {
+            title: "Motoo Apartaments",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/edificio/",
+            repository: "https://github.com/josbert2/edificio"
+        },
+
+        // Porfolio v2
+
+        {
+            title: "Porfolio v2",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/porfolio-1/",
+            repository: "https://github.com/josbert2/porfolio-1"
+        },
+
+        // Piazza 
+
+        {
+            title: "Piazza",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/piazza/#reservation",
+            repository: "https://github.com/josbert2/piazza"
+        },
+
+        // Babarrun
+
+        {
+            title: "Babarrun",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/babarrun/",
+            repository: "https://github.com/josbert2/babarrun"
+        },
+
+        // PAAGSA
+
+        {
+            title: "PAAGSA",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/mascarillas/",
+            repository: "https://github.com/josbert2/mascarillas"
+        },
+
+        // VIRUS
+        
+        {
+            title: "VIRUS",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/virus/",
+            repository: "https://github.com/josbert2/virus"
+        },
+
+        // pets/grocery food
+
+        {
+            title: "pets/grocery food",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/pet/",
+            repository: "https://github.com/josbert2/pet"
+        },
+
+        // UOH
+
+        {
+            title: "UOH",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/uoh/",
+            repository: "https://github.com/josbert2/uoh"
+        },
+
+        // webg experiments
+
+        {
+            title: "webg experiments",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/webg/",
+            repository: "https://github.com/josbert2/webgl-experiments"
+        },
+
+        // rest 911
+        {
+            title: "rest 911",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/res-workana/",
+            repository: "https://josbert2.github.io/res-workana/"
+        },
+
+        // davivivienda
+
+        {
+            title: "davivivienda",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/repowork/",
+            repository: "https://josbert2.github.io/repowork/"
+        },
+
+
+        // Savefood
+
+        {
+            title: "Savefood",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/savefood/",
+            repository: "https://josbert2.github.io/savefood/"
+        },
+
+        // ADAGIOS TEAS Y BLACKCOOFFEE
+
+        {
+            title: "ADAGIOS TEAS Y BLACKCOOFFEE",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://josbert2.github.io/teas/",
+            repository: "https://josbert2.github.io/teas/" // https://github.com/josbert2/landings
+        },
+        {
+            title: "ADAGIOS TEAS",
+            description: "Navigate the world of web technology",
+            image: test2,
+            type: "Web APP",
+            url: "https://adagio-zeta.vercel.app/",
+            repository: "https://github.com/josbert2/adagio"
+        }
+
+        // REVISAR
+
+        // https://github.com/josbert2/Alejandra-Riveros
+        // https://github.com/josbert2/Daniela-Landing
+        // https://github.com/josbert2/new-landing
+        // https://github.com/josbert2/landings-dist
+        // https://github.com/josbert2/josdocs
+        // https://github.com/josbert2/bytebox
+        // https://github.com/josbert2/munder
+
+        
     ]
 
 
