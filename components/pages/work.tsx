@@ -13,7 +13,9 @@ import p1 from '@/assets/p1.webp'
 import p2 from '@/assets/p2.webp'
 import p3 from '@/assets/p3.webp'
 import p4 from '@/assets/p3.jpeg'
-
+import mill from '@/assets/mill.webp'
+import llantas from '@/assets/llantas.webp'
+import adagio from '@/assets/adagio.jpeg'
 
 
 import test from '@/assets/test.jpeg'
@@ -65,10 +67,10 @@ export default function Work() {
 
         {
             title: "MILL",
-            description: "Navigate the world of web technology",
-            image: test2,
-            type: "Web APP",
-            url: "#",
+            description: "Con el propósito de dar respuesta a las necesidades y demandas de la Industria Metalúrgica y Metalmecánica.",
+            image: mill,
+            type: "Landing Pages",
+            url: "https://josbert2.github.io/Mill/",
             repository: "https://github.com/josbert2/Mill"
         },
 
@@ -88,7 +90,7 @@ export default function Work() {
         {
             title: "Solo Llantas",
             description: "Navigate the world of web technology",
-            image: test2,
+            image: llantas,
             type: "Web APP",
             url: "https://josbert2.github.io/llanta/shop.html#",
             repository: "https://github.com/josbert2/llanta"
@@ -238,8 +240,8 @@ export default function Work() {
         },
         {
             title: "ADAGIOS TEAS",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Natural Teas",
+            image: adagio,
             type: "Web APP",
             url: "https://adagio-zeta.vercel.app/",
             repository: "https://github.com/josbert2/adagio"
