@@ -3,6 +3,7 @@
 import Link from "next/link"
 import React, { useState, useEffect } from "react";
 import Image from "next/image"
+import { Logo } from 'devio-logo'
 import { motion, useAnimation } from "motion/react"
 import Header from "@/components/header";
 import { cn } from "@/lib/cn"
@@ -417,9 +418,10 @@ const HeaderUser = () => {
                 <div className="flex items-center gap-2.5 pr-40 absolute top-2/4 transform -translate-y-2/4 ">
                   <a className="focus:outline-none" href="/">
                     <div className="relative">
-                      <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
+                      {/*<h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
                         JH
-                      </h1>
+                      </h1> */}
+                      <Logo />
                     </div>
                   </a>
                 
