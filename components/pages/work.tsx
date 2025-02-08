@@ -18,6 +18,13 @@ import llantas from '@/assets/llantas.webp'
 import adagio from '@/assets/adagio.jpeg'
 
 
+// ICONS
+
+import iconEntrekids from '@/assets/icons/entrekids.ico'
+import iconBookforce from '@/assets/icons/bookforce.png'
+import iconCrytovision from '@/assets/icons/crypto.ico'
+
+
 import test from '@/assets/test.jpeg'
 import test2 from '@/assets/test2.png'
 
@@ -35,6 +42,7 @@ export default function Work() {
             description: "Entrekids",
             image: test,
             type: "Web APP",
+            icon: iconEntrekids,
             url: "#",
             repository: "#"
         },
@@ -43,7 +51,8 @@ export default function Work() {
             description: "Navigate the world of web technology",
             image: p4,
             type: "Web APP",
-            url: "#",
+            icon: iconBookforce,
+            url: "https://www.bookforce.io/",
             repository: "#"
         },
         {
@@ -51,6 +60,7 @@ export default function Work() {
             description: "End-to-end Blockchain Services",
             image: p3,
             type: "Web 3 App",
+            icon: iconCrytovision,
             url: "https://criptovision.com/",
             repository: "#"
         },
@@ -481,7 +491,7 @@ export default function Work() {
                                            
 
                                             <Image 
-                                                src={project.image} 
+                                                src={project.icon} 
                                                 alt=""
                                                    sizes="44px"
                                                 style={{

@@ -4,21 +4,17 @@ import { useEffect, useState } from 'react'
 
 export default function Loader({ onComplete }) {
 
-    const [progress, setProgress] = useState(0);
-    const [completed, setCompleted] = useState(false); 
-  
-    useEffect(() => {
-        if (progress < 100) {
-            const timeout = setTimeout(() => {
-                setProgress(progress + 1);
-            }, 50);
-        
-            return () => clearTimeout(timeout);
-        } else if (progress === 100) {
-      
-            if (onComplete) onComplete();
-        }
-    }, [progress, completed, onComplete]);
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    if (progress < 100) {
+      const timer = setTimeout(() => {
+        setProgress(prev => prev + 1)
+        console.log('progress →', progress + 1)
+      }, 50)
+      return () => clearTimeout(timer)
+    }
+  }, [progress])
 
   return (
     <>
@@ -45,11 +41,19 @@ export default function Loader({ onComplete }) {
           </defs>
         </svg>
         <div className=" bg-gray-200 rounded-full h-[1px] w-40">
+          {console.log(progress)}
           <motion.div
             className="h-[1px] bg-[#f7f7f7] rounded-full w-full"
             initial={{ width: "0%" }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 5, ease: "easeInOut" }}
+            onAnimationComplete={() => {
+              // Solo cuando progress === 100 disparamos onComplete
+              if (progress === 100) {
+                console.log('Animación completada 🎉')
+                onComplete?.()
+              }
+            }}
           />
         </div>
       </div>

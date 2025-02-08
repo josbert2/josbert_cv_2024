@@ -1,20 +1,17 @@
 'use client'
 
-import Loader from '@/components/Loader'
+
+import Logo  from 'devio-logo'
 
 
 
+export default function Test() {
 
-export default function page() {
 
-  const handleComplete = () => {
-    console.log("Animación completada 🎉");
-
-  };
 
   return (
     <>
-      <Loader onComplete={handleComplete} />;
+      <Logo />
     </>
   )
 }

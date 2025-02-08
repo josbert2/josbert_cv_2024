@@ -3,7 +3,7 @@
 import Link from "next/link"
 import React, { useState, useEffect } from "react";
 import Image from "next/image"
-import { Logo } from 'devio-logo'
+import  Logo  from 'devio-logo'
 import { motion, useAnimation } from "motion/react"
 import Header from "@/components/header";
 import { cn } from "@/lib/cn"
@@ -387,24 +387,6 @@ const HeaderUser = () => {
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1],   delay: 0.1, }} // Transición suave
       >
             
-              {/*<AsteroidMotion /> */}
-            
-              {/*<div className="relative hidden h-px flex-1 bg-ln-gray-200 bleed-bg-l bleed-ln-gray-200 mac:block">
-                <img
-                  src="https://alignui.com/images/landing/dot.png"
-                  width={9}
-                  height={9}
-                  alt=""
-                  className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-[37px]"
-                />
-                <img
-                  src="https://alignui.com/images/landing/dot.png"
-                  width={9}
-                  height={9}
-                  alt=""
-                  className="absolute z-30 min-h-[9px] min-w-[9px] -right-px -top-1"
-                />
-              </div> */}
               <motion.header 
                 
                 className="relative w-[50%] backdrop-blur-lg z-10 flex h-10 w-full items-center !py-[35px] justify-between  rounded-t-2xl bg-ln-gray-25 px-4  lg:justify-start lg:rounded-3xl bg-ln-gray-header  lg:shadow-ln-xs"
@@ -418,10 +400,10 @@ const HeaderUser = () => {
                 <div className="flex items-center gap-2.5 pr-40 absolute top-2/4 transform -translate-y-2/4 ">
                   <a className="focus:outline-none" href="/">
                     <div className="relative">
-                      {/*<h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
+                      <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
                         JH
-                      </h1> */}
-                      <Logo />
+                      </h1>
+                     
                     </div>
                   </a>
                 
@@ -577,22 +559,6 @@ const HeaderUser = () => {
               
                 
               </motion.header>
-            {/* <div className="relative  h-px flex-1 bg-ln-gray-200 bleed-bg-r bleed-ln-gray-200 mac:block">
-                <img
-                  src="https://alignui.com/images/landing/dot.png"
-                  width={9}
-                  height={9}
-                  alt=""
-                  className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -right-[37px] left-auto"
-                />
-                <img
-                  src="https://alignui.com/images/landing/dot.png"
-                  width={9}
-                  height={9}
-                  alt=""
-                  className="absolute z-30 min-h-[9px] min-w-[9px] -top-1 -left-px"
-                />
-              </div> */}
       </ motion.div>
     </>
   )
