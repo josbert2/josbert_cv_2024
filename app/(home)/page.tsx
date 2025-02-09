@@ -13,13 +13,13 @@ import {
   UserTravels,
   AboutMe
 } from "./page.client"
-
+import Abstraccion from '@/components/abstraccion'
 
 import localFont from 'next/font/local';
 import { cn } from '@/utils/cn';
 
 
-
+import { BackgroundPaths } from '@/components/BackgroundPaths';
 
 //import PlanetLine from '@/components/PlanetLine';
 //import About from "@/components/pages/about";
@@ -77,23 +77,26 @@ export default function HomePage() {
         <AboutMe/>
 
         <Work/>
+        <div className="-z-10 container pointer-events-none mt-[225px] mb-[225px]  rotate-180 transform invert-orbit">
+          <div className="">
+            <StarField />   
+            <CornedEarth />
+          </div>
+        </div>
+        <BackgroundPaths/>
 
         {/* <div className="relative">
         <Contact/>
       </div> */}
 
-      <div className="h-[700px]">
-      
-      </div>
-      <div className="relative ">
+     
+      {/*<div className="relative ">
         <div className="transform translate-y-[261px] rotate-180">
           <ParticulasAbstraccion />
         </div>
-       {/* <Abstraccion /> */}
-      </div>
-      <div className="h-[700px] z-10 bg-[#1a1a1d]">
-      
-      </div>
+       <Abstraccion /> 
+      </div> */}
+    
 
       </div>
     </>

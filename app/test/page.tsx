@@ -2,7 +2,7 @@
 
 
 import Logo  from 'devio-logo'
-
+import {ShinyButton} from '@/components/shiny-button'
 
 
 export default function Test() {
@@ -11,7 +11,9 @@ export default function Test() {
 
   return (
     <>
-      <Logo />
+     <ShinyButton >
+             Hola
+            </ShinyButton>
     </>
   )
 }
