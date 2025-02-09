@@ -1,8 +1,11 @@
 'use client'
 import React from 'react'
 import { motion, useMotionValueEvent, useScroll } from "motion/react"
+interface OpenWorkProps {
+    onClick: () => void;
+}
 
-export default function OpenWork() {
+export default function OpenWork({ onClick }: OpenWorkProps) {
   return (
     <>
         <div
@@ -16,6 +19,7 @@ export default function OpenWork() {
                 className="framer-6816R framer-1iqbyp5 framer-v-1iqbyp5 framer-4r3h2s"
                 data-border="true"
                 data-framer-name="Main"
+                onClick={onClick}
                 style={{
                 "--border-bottom-width": "1px",
                 "--border-color": "rgba(255, 255, 255, 0.01)",
@@ -118,7 +122,7 @@ export default function OpenWork() {
                          </motion.div>
                 </div>
             </a>
-            </div>;
+            </div>
 
     </>
   )

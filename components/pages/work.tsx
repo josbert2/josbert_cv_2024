@@ -1,30 +1,50 @@
 'use client'
-import { animate, inView, motion } from 'motion/react'
+
+import { motion } from 'motion/react'
+
 import { useState } from 'react'
 import { useInView } from "react-intersection-observer";
 import ButtonSection from '../button-section';
 import Image from 'next/image'
 
-import Projecto from '@/assets/project-1.webp'
-import Projecto2 from '@/assets/project-2.png'
 
 
-import p1 from '@/assets/p1.webp'
-import p2 from '@/assets/p2.webp'
 import p3 from '@/assets/p3.webp'
 import p4 from '@/assets/p3.jpeg'
 import mill from '@/assets/mill.webp'
 import llantas from '@/assets/llantas.webp'
-import adagio from '@/assets/adagio.jpeg'
-
+import adagio from '@/assets/adagio.webp'
+import productApp from '@/assets/productApp.webp'
+import Motoo from '@/assets/motoo.webp'
+import piazza from '@/assets/piazza.webp'
+import babarrun from '@/assets/babarrun.webp'
+import mascarillas from '@/assets/mascarillas.webp'
+import virus from '@/assets/virus.webp'
+import pixie from '@/assets/pixie.webp'
+import uoh from '@/assets/uoh.webp'
+import rest911 from '@/assets/rest911.webp'
+import davivivienda from '@/assets/davivivienda.webp'
+import savefood from '@/assets/savefood.webp'
+import blackcoffee from '@/assets/blackcoffe.webp'
 
 // ICONS
 
 import iconEntrekids from '@/assets/icons/entrekids.ico'
 import iconBookforce from '@/assets/icons/bookforce.png'
 import iconCrytovision from '@/assets/icons/crypto.ico'
-
-
+import iconMill from '@/assets/icons/mill.png'
+import iconApp from '@/assets/icons/app.png'
+import iconMotoo from '@/assets/icons/hotel.svg'
+import iconLlantas from '@/assets/icons/llanta.png'
+import iconPiazza from '@/assets/icons/piazza.png'
+import iconBabarrun from '@/assets/icons/babarrun.png'
+import iconMascarillas from '@/assets/icons/mascarillas.png'
+import iconPixie from '@/assets/icons/pixie.png'
+import iconUoh from '@/assets/icons/uoh.png'
+import IconRest from '@/assets/icons/rest.png'
+import iconDavivivienda from '@/assets/icons/david.png'
+import iconSavefood from '@/assets/icons/savefood.png'
+import iconBlackcoffee from '@/assets/icons/black.png'
 import test from '@/assets/test.jpeg'
 import test2 from '@/assets/test2.png'
 
@@ -36,10 +56,18 @@ export default function Work() {
         triggerOnce: true, 
     });
 
+    const [itemsToShow, setItemsToShow] = useState<number>(6);
+
+   
+    const handleLoadMore = () => {
+      setItemsToShow((prev) => prev + 6);
+    };
+
+    
     const dataProject = [
         {
             title: "Entrekids",
-            description: "Entrekids",
+            description: "Marketplate para actividades infantiles",
             image: test,
             type: "Web APP",
             icon: iconEntrekids,
@@ -48,7 +76,7 @@ export default function Work() {
         },
         {
             title: "Bookforce",
-            description: "Navigate the world of web technology",
+            description: "Software para tu negocio de entretenimiento",
             image: p4,
             type: "Web APP",
             icon: iconBookforce,
@@ -64,14 +92,7 @@ export default function Work() {
             url: "https://criptovision.com/",
             repository: "#"
         },
-        {
-            title: "Bookforce",
-            description: "Navigate the world of web technology",
-            image: test2,
-            type: "Web APP",
-            url: "#",
-            repository: "#"
-        },
+       
 
         // MILL
 
@@ -79,6 +100,7 @@ export default function Work() {
             title: "MILL",
             description: "Con el propósito de dar respuesta a las necesidades y demandas de la Industria Metalúrgica y Metalmecánica.",
             image: mill,
+            icon: iconMill,
             type: "Landing Pages",
             url: "https://josbert2.github.io/Mill/",
             repository: "https://github.com/josbert2/Mill"
@@ -87,11 +109,12 @@ export default function Work() {
         // Product APP
 
         {
-            title: "Product APP",
-            description: "Navigate the world of web technology",
-            image: test2,
+            title: "Template App",
+            description: "Landing pages para app de productos",
+            image: productApp,
             type: "Web APP",
-            url: "#",
+            icon: iconApp,
+            url: "https://josbert2.github.io/product/",
             repository: "https://github.com/josbert2/product"
         },
 
@@ -99,9 +122,10 @@ export default function Work() {
 
         {
             title: "Solo Llantas",
-            description: "Navigate the world of web technology",
+            description: "Landing pages para sitio de ventas de llantas",
             image: llantas,
             type: "Web APP",
+            icon: iconLlantas,
             url: "https://josbert2.github.io/llanta/shop.html#",
             repository: "https://github.com/josbert2/llanta"
         },
@@ -110,31 +134,24 @@ export default function Work() {
 
         {
             title: "Motoo Apartaments",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Landing pages para Apartamentos, hotels y casas",
+            image: Motoo,
             type: "Web APP",
+            icon: iconMotoo,
             url: "https://josbert2.github.io/edificio/",
             repository: "https://github.com/josbert2/edificio"
         },
 
-        // Porfolio v2
-
-        {
-            title: "Porfolio v2",
-            description: "Navigate the world of web technology",
-            image: test2,
-            type: "Web APP",
-            url: "https://josbert2.github.io/porfolio-1/",
-            repository: "https://github.com/josbert2/porfolio-1"
-        },
+       
 
         // Piazza 
 
         {
             title: "Piazza",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "We would like to welcome you to Little Piazza Bar & Grill",
+            image: piazza,
             type: "Web APP",
+            icon: iconPiazza,
             url: "https://josbert2.github.io/piazza/#reservation",
             repository: "https://github.com/josbert2/piazza"
         },
@@ -143,9 +160,10 @@ export default function Work() {
 
         {
             title: "Babarrun",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Landing pages de panoramas",
+            image: babarrun,
             type: "Web APP",
+            icon: iconBabarrun,
             url: "https://josbert2.github.io/babarrun/",
             repository: "https://github.com/josbert2/babarrun"
         },
@@ -154,9 +172,10 @@ export default function Work() {
 
         {
             title: "PAAGSA",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "A PAAGSA, una empresa 100% mexicana con más de 100 años en la industria de las Artes Gráficas",
+            image: mascarillas,
             type: "Web APP",
+            icon: iconMascarillas,
             url: "https://josbert2.github.io/mascarillas/",
             repository: "https://github.com/josbert2/mascarillas"
         },
@@ -165,9 +184,10 @@ export default function Work() {
         
         {
             title: "VIRUS",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Virus que ya se han ido y virus que llegarán.",
+            image: virus,
             type: "Web APP",
+            icon: iconMascarillas,
             url: "https://josbert2.github.io/virus/",
             repository: "https://github.com/josbert2/virus"
         },
@@ -175,10 +195,11 @@ export default function Work() {
         // pets/grocery food
 
         {
-            title: "pets/grocery food",
-            description: "Navigate the world of web technology",
-            image: test2,
+            title: "pixie",
+            description: "Landing pages para ecommerce de ventas de productos de mascotas",
+            image: pixie,
             type: "Web APP",
+            icon: iconPixie,
             url: "https://josbert2.github.io/pet/",
             repository: "https://github.com/josbert2/pet"
         },
@@ -187,30 +208,22 @@ export default function Work() {
 
         {
             title: "UOH",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Landing pages para Universidad UOH",
+            image: uoh,
             type: "Web APP",
+            icon: iconUoh,
             url: "https://josbert2.github.io/uoh/",
             repository: "https://github.com/josbert2/uoh"
         },
 
-        // webg experiments
-
-        {
-            title: "webg experiments",
-            description: "Navigate the world of web technology",
-            image: test2,
-            type: "Web APP",
-            url: "https://josbert2.github.io/webg/",
-            repository: "https://github.com/josbert2/webgl-experiments"
-        },
 
         // rest 911
         {
             title: "rest 911",
             description: "Navigate the world of web technology",
-            image: test2,
+            image: rest911,
             type: "Web APP",
+            icon: IconRest,
             url: "https://josbert2.github.io/res-workana/",
             repository: "https://josbert2.github.io/res-workana/"
         },
@@ -218,10 +231,11 @@ export default function Work() {
         // davivivienda
 
         {
-            title: "davivivienda",
-            description: "Navigate the world of web technology",
-            image: test2,
+            title: "Davivienda",
+            description: "Landing Pages para banco Davivivienda",
+            image: davivivienda,
             type: "Web APP",
+            icon: iconDavivivienda,
             url: "https://josbert2.github.io/repowork/",
             repository: "https://josbert2.github.io/repowork/"
         },
@@ -231,9 +245,10 @@ export default function Work() {
 
         {
             title: "Savefood",
-            description: "Navigate the world of web technology",
-            image: test2,
+            description: "Iniciativa para reducir el excedente de alimentosgenerado por los restaurantes",
+            image: savefood,
             type: "Web APP",
+            icon: iconSavefood,
             url: "https://josbert2.github.io/savefood/",
             repository: "https://josbert2.github.io/savefood/"
         },
@@ -241,10 +256,11 @@ export default function Work() {
         // ADAGIOS TEAS Y BLACKCOOFFEE
 
         {
-            title: "ADAGIOS TEAS Y BLACKCOOFFEE",
+            title: "Black Coffee",
             description: "Navigate the world of web technology",
-            image: test2,
+            image: blackcoffee,
             type: "Web APP",
+            icon: iconBlackcoffee,
             url: "https://josbert2.github.io/teas/",
             repository: "https://josbert2.github.io/teas/" // https://github.com/josbert2/landings
         },
@@ -270,6 +286,8 @@ export default function Work() {
         
     ]
 
+    const visibleProjects = dataProject.slice(0, itemsToShow);
+
 
 
     return (
@@ -289,7 +307,7 @@ export default function Work() {
                  
                     <div className="framer-1lrue9j">
                        
-                        {dataProject.map((project, index) => (
+                        {visibleProjects.map((project, index) => (
                              <div
                              className="framer-1hhlnuq-container"
                              key={index}
@@ -301,7 +319,7 @@ export default function Work() {
                                     className="framer-rtsKZ framer-6pxgjl framer-v-6pxgjl framer-d4tf0f"
                                     onMouseEnter={() => setHoveredIndex(index)}
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    href="./projects/glide"
+                                    href={project.url}
                                     style={{
                                         backgroundColor: "rgba(21, 22, 23, 0)",
                                         opacity: "1",
@@ -616,6 +634,9 @@ export default function Work() {
                                             <Image 
                                                 src={project.image}
                                                 alt="he"
+                                                loading="lazy"
+                                                placeholder="blur" 
+                                                blurDataURL={project.image.src}
                                                 style={{
                                                     borderRadius: "inherit",
                                                     display: "block",
@@ -635,6 +656,76 @@ export default function Work() {
                         ))}
                         
                     </div>
+
+                    {itemsToShow < dataProject.length && (
+                        <div className="text-center justify-center mt-8">
+                            <a
+                                className="framer-859uep framer-1ex4s6v"
+                                data-framer-name="With left icon"
+                                data-reset="button"
+                                onClick={handleLoadMore}
+                                rel="noopener"
+                               
+                                target="_blank">
+                                <div
+                                    className="framer-fxtd3v-container"
+                                    style={{
+                                    opacity: "1",
+                                    }}>
+                                    <div
+                                    style={{
+                                        display: "contents",
+                                    }}>
+                                    <svg
+                                        fill="none"
+                                        height="24"
+                                        stroke='var(--token-c220c2af-a046-4217-9e0d-c6c77afa9a2a, rgb(255, 255, 255)) /* {"name":"Text-Light"} */'
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        style={{
+                                        height: "100%",
+                                        width: "100%",
+                                        }}
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="21" r="1" />
+                                        <circle cx="20" cy="21" r="1" />
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                    </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    className="framer-90hi5l"
+                                    data-framer-component-type="RichTextContainer"
+                                    style={{
+                                    "--extracted-r6o4lv": "rgb(255, 255, 255)",
+                                    "--framer-paragraph-spacing": "0px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    flexShrink: "0",
+                                    justifyContent: "flex-start",
+                                    opacity: "1",
+                                    outline: "none",
+                                    transform: "none",
+                                    }}>
+                                    <p
+                                    className="framer-text"
+                                    style={{
+                                  
+                                        "--framer-font-size": "14px",
+                                        "--framer-font-weight": "600",
+                                        "--framer-text-color": "var(--extracted-r6o4lv, rgb(255, 255, 255))",
+                                    }}>
+                                        Cargar más
+                                    </p>
+                                </div>
+                                </a>
+
+                     
+                        </div>
+                    )}
                    
 
                 </div>

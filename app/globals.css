@@ -2504,3 +2504,44 @@ progress[value] {
   height: 1px;
   margin-top: 100px !important;
 }
+
+.framer-859uep {
+ 
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex
+;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  height: 44px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 40px;
+  position: relative;
+  text-decoration: none;
+  width: min-content;
+  will-change: var(--framer-will-change-override, transform);
+  background: #33312f4d;
+  transition: all .3s ease;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 1px solid #2f2f2f;
+}
+
+.framer-859uep:hover {
+  box-shadow: 
+    rgba(var(--primary-color), 0.63)  0.36px  0.36px  2.55px  -1.08px,
+    rgba(var(--primary-color), 0.58)  1.37px  1.37px  9.71px  -2.16px,
+    rgba(var(--primary-color), 0.35)     6px     6px 42.43px  -3.25px;
+}
+
+.framer-90hi5l {
+  flex: none;
+  height: auto;
+  position: relative;
+  white-space: pre;
+  width: auto;
+  text-transform: uppercase;
+}
