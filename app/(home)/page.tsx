@@ -38,66 +38,7 @@ import StarField from '@/components/particles'
 export default function HomePage() {
   return (
     <>
-      <div className="relative isolate flex min-h-screen flex-col bg-ln-gray-25">
-        <HeaderUser />
-        <LineAbsolute />
-        <div className="pt-10 absolute top-0 left-0 h-full w-full">
-          <AsteroidMotion />
-        </div>
-
-        {/* hero  section */}
-        <HeroSection />
-
-        {/* decoration orbit */}
-        <div className=" container pointer-events-none mt-[225px] ">
-          <div className="">
-            <StarField />   
-            <CornedEarth />
-          </div>
-        </div>
-
-
-        <div className="container pointer-events-none !pl-0 !pr-0 -z-10  select-none mac:block">
-          <div className="border-t border-color w-full">
-            
-          </div>
-        </div>
-
-        {/* Travel */}
-        <UserTravels />
-
-        {/* SEPARATOR */}
-        <Separator/>
-
-        {/* About me */}
-        <AboutMe/>
-
-        <Work/>
-        <div className="-z-10 container pointer-events-none mt-[225px] mb-[225px]  rotate-180 transform invert-orbit">
-          <div className="">
-            <StarField />   
-            <CornedEarth />
-          </div>
-        </div>
-        <div className="container pointer-events-none !px-0 mx-0  select-none mac:block">
-        <BackgroundPaths/>
-        </div>
-        
-
-        {/* <div className="relative">
-        <Contact/>
-      </div> */}
-
-     
-      {/*<div className="relative ">
-        <div className="transform translate-y-[261px] rotate-180">
-          <ParticulasAbstraccion />
-        </div>
-       <Abstraccion /> 
-      </div> */}
-    
-
-      </div>
+      
     </>
   )
 }

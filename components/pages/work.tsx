@@ -45,7 +45,7 @@ import IconRest from '@/assets/icons/rest.png'
 import iconDavivivienda from '@/assets/icons/david.png'
 import iconSavefood from '@/assets/icons/savefood.png'
 import iconBlackcoffee from '@/assets/icons/black.png'
-import test from '@/assets/test.jpeg'
+import test from '@/assets/test.webp'
 
 
 
