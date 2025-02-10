@@ -50,7 +50,6 @@ const reviews = [
   ];
 
   const firstRow = reviews.slice(0, reviews.length / 2);
-  const secondRow = reviews.slice(reviews.length / 2);
  
 
   const ReviewCard = ({

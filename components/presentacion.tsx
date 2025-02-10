@@ -1,21 +1,8 @@
 import React from 'react'
-import { cn } from '@/utils/cn';
 
 
-const presentacionOne = () => {
-    return (
-        <>
-            <h1 className={cn('text-title-h1 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-5 font-anurati')}>
-            Josbert Hernández
-          </h1>
-          <h2 className="mb-0 text-gray-500 text-title-h5 font">
-            Creative Developer &
-            <br />
-            UI/UX Designer
-          </h2>
-        </>
-    )   
-}
+
+
 
 const presentacionTwo = () => {
     return (
@@ -24,7 +11,7 @@ const presentacionTwo = () => {
                 className="framer-1xpccc6"
                 data-framer-appear-id="1xpccc6"
                 data-framer-name="Text"
-                name="Text"
+             
                 style={{
                     opacity: "1",
                     transform: "perspective(1200px)",
@@ -62,7 +49,7 @@ const presentacionTwo = () => {
                         backgroundImage:
                             "linear-gradient(0deg, rgba(190, 193, 207, 0.64) 0%, rgba(213, 216, 234, 0.886) 88.2362%, rgb(223, 226, 245) 100%)",
                         }}>
-                       <span className="font-xl"> Hi, I'm Josbert 💫 I am</span>
+                       <span className="font-xl"> Hi, I&apos;m Josbert 💫 I am</span>
                         <span
                         className="framer-text mr-1"
                         style={{

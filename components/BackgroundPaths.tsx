@@ -4,8 +4,9 @@ import { motion } from "motion/react";
 import OpenWork from "@/components/open-work";
 import { ShinyButton } from "./shiny-button";
 
+
 function FloatingPaths({ position }: { position: number }) {
-  const paths = Array.from({ length: 12 }, (_, i) => ({
+  const paths = Array.from({ length: 4 }, (_, i) => ({
     id: i,
     d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
       380 - i * 5 * position
@@ -49,12 +50,8 @@ function FloatingPaths({ position }: { position: number }) {
   );
 }
 
-export function BackgroundPaths({
-  title = "joheandroid@gmail.com",
-}: {
-  title?: string;
-}) {
-  const words = title.split(" ");
+export function BackgroundPaths() {
+  //const words = title.split(" ");
 
   return (
     <div className="relative min-h-screen  w-full flex items-center justify-center overflow-hidden ">
@@ -71,9 +68,13 @@ export function BackgroundPaths({
           transition={{ duration: 2 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
+          <h3 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter"
+            style={{
+              fontSize: "14px",
+            }}
+          >
             <ShinyButton >
-              {words.map((word, wordIndex) => (
+              {/*   {words.map((word, wordIndex) => (
                 <span key={wordIndex} className="inline-block mr-4 last:mr-0">
                   {word.split("").map((letter, letterIndex) => (
                     <motion.span
@@ -97,9 +98,19 @@ export function BackgroundPaths({
                     </motion.span>
                   ))}
                 </span>
-              ))}
+              ))} */}
+              <div className="flex justify-center items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M8.5 19H8c-4 0-6-1-6-6V8c0-4 2-6 6-6h8c4 0 6 2 6 6v5c0 4-2 6-6 6h-.5c-.31 0-.61.15-.8.4l-1.5 2c-.66.88-1.74.88-2.4 0l-1.5-2c-.16-.22-.53-.4-.8-.4Z" stroke="#3b3b3b" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" strokeLinejoin="round"></path>
+                <path d="M15.996 11h.01M11.995 11h.01M7.995 11h.008" stroke="#3b3b3b" stroke-width="2" stroke-linecap="round" strokeLinejoin="round"></path></svg>
+                <a href="mailto:joheandroid@gmail.com" className="text-[#9b9b9b] font-bold">
+                  Get in touch
+                </a>
+                <svg className="rotate transform -rotate-90" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path stroke="#3b3b3b" stroke-linecap="round" strokeLinejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M19.92 8.95l-6.52 6.52c-.77.77-2.03.77-2.8 0L4.08 8.95"></path></svg>
+              </div>
             </ShinyButton>
-          </h1>
+          </h3>
           <div
                 className="framer-azddm3"
                 data-framer-name="Text"
@@ -110,7 +121,7 @@ export function BackgroundPaths({
                     className="framer-JUd2S framer-bn8buf framer-v-bn8buf framer-1ydy58o"
                     data-framer-name="Variant 1"
                     data-highlight="true"
-                    tabIndex="0"
+
                     style={{
                     "--rsevh9": "0px 2px 5px 0px rgba(0, 0, 0, 0.25)",
                     height: "100%",
@@ -176,7 +187,7 @@ export function BackgroundPaths({
                         "radial-gradient(60% 200% at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)",
                     }}
                     >
-                    Want custom and unique website for your business?
+                      ¿Quieres un sitio web perzonalizado y único para tu negocio?
                     </span>
                 </h1>
                 </div>
@@ -206,13 +217,13 @@ export function BackgroundPaths({
                         "var(--extracted-1eung3n, var(--token-8e61a935-bee1-4d42-ba1c-0c51ee3870e4, rgba(255, 255, 255, 0.7)))",
                     }}
                 >
-                    Take the free 60 second quiz and get matched to a website template that’s a perfect for your business.
+                    
                 </h4>
                 </div>
             </div>
 
             <div className="flex justify-center mt-5 pt-10">
-                <OpenWork />
+                <OpenWork onClick={() => console.log(0)} />
             </div>
 
 

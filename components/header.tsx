@@ -2,13 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import AsteroidMotion from '@/components/Asteroide'
 
 
-const DynamicThemeSwitch = dynamic(() => import('./theme-switch'), {
-  ssr: false,
-});
+
+
+
 
 export default function Header() {
 
@@ -63,13 +61,13 @@ export default function Header() {
                transition={{ duration: 0.2, ease: easeOutQuint,   delay: 0, }}
                className="absolute z-[9999] h-[1px] inset-x-1 top-[.3px] -bottom-px bg-gradient-to-r from-[#EDD4BA]/0 via-[#EDD4BA]/40 to-[#EDD4BA]/0 "></motion.div>
               <div className="flex items-center gap-2.5 pr-40 absolute top-2/4 transform -translate-y-2/4 ">
-                <a className="focus:outline-none" href="/">
+                <Link className="focus:outline-none" href="/">
                   <div className="relative">
                     <h1 className="text-title-h6 bg-clip-text bg-gradient-to-b from-black dark:from-white text-transparent antialiased relative text-5xl sm:text-7xl font-bold py-1 font-anurati">
                       JH
                     </h1>
                   </div>
-                </a>
+                </Link>
                
               </div>
               <nav className="hidden justify-center items-center gap-2.5 lg:flex absolute top-2/4 transform -translate-y-2/4  right-0">

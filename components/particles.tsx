@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 
 function StarField() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Número máximo de estrellas que quieres en pantalla
   const numStars = 300; // Sube o baja según tu gusto
@@ -17,7 +17,7 @@ function StarField() {
   const spawnRate = 40;
 
   // Array de estrellas
-  const stars = useRef([]);
+  const stars = useRef<ReturnType<typeof createStar>[]>([]);
 
   // Control de mouse (opcional)
   const mousePos = useRef({ x: 0, y: 0 });
@@ -27,7 +27,7 @@ function StarField() {
   const firstBatchSpawned = useRef(false);
   const initialBatchTime = useRef(0);
 
-  function createStar(canvasWidth, canvasHeight) {
+  function createStar(canvasWidth: number, canvasHeight: number) {
     // Ajusta la vida para que duren 3–5 segundos
     const lifetime = 3000 + Math.random() * 2000;
 
@@ -61,14 +61,15 @@ function StarField() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let animationFrameId;
+    let animationFrameId: number;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     // (Opcional) detectar movimiento del mouse
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       mousePos.current.x = e.clientX;
       mousePos.current.y = e.clientY;
     };
@@ -77,7 +78,9 @@ function StarField() {
     // Crea un batch inicial de estrellas
     function spawnInitialBatch() {
       for (let i = 0; i < initialBatch; i++) {
-        stars.current.push(createStar(canvas.width, canvas.height));
+        if (canvas) {
+          stars.current.push(createStar(canvas.width, canvas.height));
+        }
       }
       firstBatchSpawned.current = true;
       initialBatchTime.current = performance.now();
@@ -85,7 +88,10 @@ function StarField() {
     }
 
     function drawStars() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (!ctx) return;
+      if (canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
       const now = Date.now();
 
       stars.current.forEach((star) => {
@@ -138,7 +144,7 @@ function StarField() {
 
           for (let i = 0; i < starsToSpawn; i++) {
             if (stars.current.length < numStars) {
-              stars.current.push(createStar(canvas.width, canvas.height));
+              stars.current.push(createStar(canvasRef.current!.width, canvasRef.current!.height));
             }
           }
 

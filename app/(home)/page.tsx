@@ -1,22 +1,18 @@
 import {
   //BecomeSponsor,
-  DashedCircle,
-  DashedLineContainer,
+  //DashedCircle,
+  //DashedLineContainer,
   //Feature,
   //GetStarted,
  
-  HorizontalDashedLine,
-  VerticalDashedLine,
+  //HorizontalDashedLine,
+  //VerticalDashedLine,
   HeaderUser,
   LineAbsolute,
   HeroSection,
   UserTravels,
   AboutMe
 } from "./page.client"
-import Abstraccion from '@/components/abstraccion'
-
-import localFont from 'next/font/local';
-import { cn } from '@/utils/cn';
 
 
 import { BackgroundPaths } from '@/components/BackgroundPaths';
@@ -33,7 +29,7 @@ import CornedEarth from '@/components/corned-earth'
 //import OpenWork from '@/components/open-work'
 
 //import Abstraccion from '@/components/abstraccion'
-import ParticulasAbstraccion from '@/components/particles-asbtraccion'
+
 import AsteroidMotion from '@/components/Asteroide'
 import StarField from '@/components/particles'
 //import Rrss from '@/components/Rrss'
@@ -83,7 +79,10 @@ export default function HomePage() {
             <CornedEarth />
           </div>
         </div>
+        <div className="container pointer-events-none !px-0 mx-0  select-none mac:block">
         <BackgroundPaths/>
+        </div>
+        
 
         {/* <div className="relative">
         <Contact/>

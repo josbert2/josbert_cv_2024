@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { motion, useMotionValueEvent, useScroll } from "motion/react"
+import { motion } from "motion/react"
 interface OpenWorkProps {
     onClick: () => void;
 }

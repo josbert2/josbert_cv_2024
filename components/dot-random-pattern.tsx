@@ -1,6 +1,13 @@
 import React from "react";
 
-const SvgGrid = ({ rows, cols, cellWidth, cellHeight }) => {
+interface SvgGridProps {
+  rows: number;
+  cols: number;
+  cellWidth: number;
+  cellHeight: number;
+}
+
+const SvgGrid: React.FC<SvgGridProps> = ({ rows, cols, cellWidth, cellHeight }) => {
   // Crear las celdas como rectángulos SVG
   const cells = [];
   for (let row = 0; row < rows; row++) {

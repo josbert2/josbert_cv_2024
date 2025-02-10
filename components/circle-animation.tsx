@@ -2,47 +2,18 @@
 import React, { useRef, useEffect } from "react";
 
 function OscillatingCircles() {
-  const canvasRef = useRef(null);
-  const circlesDataRef = useRef([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const circlesDataRef = useRef<{ x: number; y: number; speedX: number; speedY: number; radius: number; color: string; }[]>([]);
 
-  function clamp(value, min, max) {
+  /*function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
-  }
+  } */
   
-  function getRandomColorNearBase() {
-    // Valores base (rgb(230,128,25))
-    const baseR = 230;
-    const baseG = 128;
-    const baseB = 25;
-  
-    // Rango aleatorio: ajusta ±15 (o lo que quieras)
-    const offset = 15;
-  
-    // Genera variación aleatoria
-    const r = clamp(
-      baseR + Math.floor(Math.random() * (offset * 2 + 1)) - offset,
-      0,
-      255
-    );
-    const g = clamp(
-      baseG + Math.floor(Math.random() * (offset * 2 + 1)) - offset,
-      0,
-      255
-    );
-    const b = clamp(
-      baseB + Math.floor(Math.random() * (offset * 2 + 1)) - offset,
-      0,
-      255
-    );
-  
-    // Alpha fijo de 0.35 para mantener la transparencia
-    const a = 0.35;
-  
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
-  }
+ 
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
     const { width, height } = canvas;
 
@@ -95,6 +66,7 @@ function OscillatingCircles() {
     initCircles();
 
     function animate() {
+      if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
 
       circlesDataRef.current.forEach((circle) => {

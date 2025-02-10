@@ -1,5 +1,5 @@
 import React from 'react'
-import CornedEarth from '../corned-earth'
+
 export default function LineAbsolute() {
   return (
     <>

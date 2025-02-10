@@ -46,7 +46,7 @@ import iconDavivivienda from '@/assets/icons/david.png'
 import iconSavefood from '@/assets/icons/savefood.png'
 import iconBlackcoffee from '@/assets/icons/black.png'
 import test from '@/assets/test.jpeg'
-import test2 from '@/assets/test2.png'
+
 
 
 export default function Work() {
@@ -349,7 +349,7 @@ export default function Work() {
                                         }}
                                         viewBox="0 0 256 256"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <g color="rgba(0, 0, 0, 0.19)" weight="regular">
+                                        <g color="rgba(0, 0, 0, 0.19)">
                                             <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
                                         </g>
                                         </svg>

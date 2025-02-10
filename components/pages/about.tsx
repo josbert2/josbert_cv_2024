@@ -1,5 +1,5 @@
 'use client'
-import { animate, inView, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import { useInView } from "react-intersection-observer";
 
 

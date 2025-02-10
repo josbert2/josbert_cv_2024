@@ -1,15 +1,15 @@
 "use client";
-import { animate, inView, motion } from "motion/react";
+import {  motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 export default function Contact() {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     threshold: 0.2,
     triggerOnce: true,
   });
 
 
-  const titleVariants = (index) => ({
+  const titleVariants = (index: number) => ({
     // Estado "descanso" (posición inicial y de regreso tras quitar hover)
     rest: {
       x: 0,
@@ -28,8 +28,7 @@ export default function Contact() {
     },
   });
 
-  var LETTER_PROJECT = 'View Project';
-  LETTER_PROJECT = LETTER_PROJECT.split("");
+  const LETTER_PROJECT = 'View Project'.split('');
 
 
   return (
@@ -95,7 +94,7 @@ export default function Contact() {
               </div>
               <div className="mt-14 flex w-full flex-col items-center">
                 <div className="flex w-full items-center justify-center text-gray-500">
-                  Design by Josbert Hernández{"{"}' '{"}"}
+                  Design by Josbert Hernández{"{ &apos; &apos; }"}
                 </div>
                 <div className="mt-4">
                   <a

@@ -2,19 +2,19 @@
 import React, { useRef, useEffect } from 'react';
 
 function StarField() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const numStars = 300;
   const initialBatch = 1;
   const initialPause = 0;
   const spawnRate = 100;
 
-  const stars = useRef([]);
+  const stars = useRef<Array<ReturnType<typeof createStar>>>([]);
   const lastSpawnTime = useRef(0);
   const firstBatchSpawned = useRef(false);
   const initialBatchTime = useRef(0);
 
-  function createStar(canvasWidth, canvasHeight) {
+  function createStar(canvasWidth: number, canvasHeight: number) {
     const lifetime = 3000 + Math.random() * 2000;
 
     const greyVal = Math.floor(Math.random() * 75 + 180);
@@ -51,21 +51,28 @@ function StarField() {
       console.error('Canvas element is missing');
       return;
     }
-
     const ctx = canvas.getContext('2d');
     if (!ctx) {
       console.error('2D context is not available');
       return;
     }
 
-    let animationFrameId;
+    let animationFrameId: number;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     function spawnInitialBatch() {
-      for (let i = 0; i < initialBatch; i++) {
-        stars.current.push(createStar(canvas.width, canvas.height));
+      if (canvas) {
+        for (let i = 0; i < initialBatch; i++) {
+          if (canvas) {
+            if (canvas) {
+              if (canvas) {
+                stars.current.push(createStar(canvas.width, canvas.height));
+              }
+            }
+          }
+        }
       }
       firstBatchSpawned.current = true;
       initialBatchTime.current = performance.now();
@@ -73,7 +80,12 @@ function StarField() {
     }
 
     function drawStars() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (!ctx) {
+        return;
+      }
+      if (canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
       const now = Date.now();
     
       stars.current.forEach((star) => {
@@ -96,14 +108,16 @@ function StarField() {
         // Asegurarse de que la opacidad no sea negativa
         currentAlpha = Math.max(0, currentAlpha);
     
-        const curvedProgress = progress ** 2;
-        const newX = star.startX + (star.endX - star.startX) * curvedProgress;
-        const newY = star.startY + (star.endY - star.startY) * curvedProgress;
+        //const curvedProgress = progress ** 2;
+       // const newX = star.startX + (star.endX - star.startX) * curvedProgress;
+       // const newY = star.startY + (star.endY - star.startY) * curvedProgress;
     
-        star.x = newX;
-        star.y = newY;
-    
-        ctx.fillStyle = `rgba(${star.r}, ${star.g}, ${star.b}, ${currentAlpha})`;
+        if (ctx) {
+          ctx.fillStyle = `rgba(${star.r}, ${star.g}, ${star.b}, ${currentAlpha})`;
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          ctx.fill();
+        }
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
         ctx.fill();
@@ -130,7 +144,8 @@ function StarField() {
 
           for (let i = 0; i < starsToSpawn; i++) {
             if (stars.current.length < numStars) {
-              stars.current.push(createStar(canvas.width, canvas.height));
+              stars.current.push(createStar(canvasRef.current!.width, canvasRef.current!.height));
+
             }
           }
 
@@ -159,7 +174,10 @@ function StarField() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', () => {
+      handleResize();
+      drawStars();
+    });
 
     return () => {
       window.removeEventListener('resize', handleResize);

@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const boxShadowIntensity = Math.random() * 225 + 5;
 const asteroidVariants = {
-    initial: (startPosition) => ({
+    initial: (startPosition: { x: number; y: number }) => ({
         x: startPosition.x,
         y: startPosition.y,
         opacity: 1,
@@ -13,7 +13,7 @@ const asteroidVariants = {
         top: Math.random() * 30 + 'vh',
         left: -100,
     }),
-    animate: (custom) => ({
+    animate: (custom: { duration: number }) => ({
         x: '50vw',
         y: '50vh',
         opacity: 0,
@@ -38,7 +38,7 @@ const generateRandomStartPosition = () => {
 
 
 const AsteroidMotion = () => {
-    const [asteroids, setAsteroids] = React.useState([]);
+    const [asteroids, setAsteroids] = React.useState<{ id: number; startPosition: { x: number; y: number }; duration: number }[]>([]);
     const asteroidLimit = 4; // Limit the number of asteroids
     
     React.useEffect(() => {

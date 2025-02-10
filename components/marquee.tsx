@@ -221,7 +221,7 @@ const tools = [
   }
 ]
 export default function MarqueeHtml() {
-  const marqueeRef = useRef(null);
+  const marqueeRef = useRef<HTMLUListElement>(null);
   const [oneSetWidth, setOneSetWidth] = useState(0);
 
   // Velocidad en px/segundo
@@ -240,7 +240,7 @@ export default function MarqueeHtml() {
   const duration = oneSetWidth > 0 ? oneSetWidth / speed : 0;
 
   return (
-    <div className="framer-1augxt8" data-framer-name="IconsTicker" name="IconsTicker">
+    <div className="framer-1augxt8" data-framer-name="IconsTicker" >
       <div className="framer-obe0ej-container">
         <div
           style={{
@@ -290,7 +290,6 @@ export default function MarqueeHtml() {
                   aria-label={item.label}
                   className={item.wrapperClass}
                   data-framer-name={item.dataFramerName}
-                  name={item.name}
                   style={{ flexShrink: 0, width: 50, height: 50, position: "relative" }}
                 >
                   <div

@@ -8,7 +8,7 @@ export default function PlanetLine() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
     setMousePosition({ x: clientX, y: clientY });
   };
