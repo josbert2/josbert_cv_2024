@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 // Variante para el contenedor (controla el stagger de los hijos)
 const containerVariant = {
