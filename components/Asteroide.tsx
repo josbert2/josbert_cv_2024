@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 const boxShadowIntensity = Math.random() * 225 + 5;
 const asteroidVariants = {
